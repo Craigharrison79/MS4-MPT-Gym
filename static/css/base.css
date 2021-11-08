@@ -5,13 +5,14 @@ html {
 body {
     background: url('/media/home-gym-photo.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh-164px);
-    /*height: calc(100vh - 164px);  - height of header */
+    /*height: calc(100vh-164px);*/
+    height: 100vh
 }
 
 #main-nav {
     z-index: 999;
 }
+
 
 .shadow-box {
     background-color: black !important;
