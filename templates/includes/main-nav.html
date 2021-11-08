@@ -11,10 +11,11 @@
               Product & Services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{% url 'products' %}">All</a></li>
-              <li><a class="dropdown-item" href="#">Personal Trainer</a></li>
-              <li><a class="dropdown-item" href="#">Message</a></li>
-              <li><a class="dropdown-item" href="#">Nutrition</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=Supplements,Training_Equipment,Shakers_Bottles,Personal Training">All Products</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=Supplements">Supplements</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=Training_Equipment">Training Equipment</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=Shakers_Bottles">Shakers & Bottles</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=Personal Training">Personal Training</a></li>
             </ul>
           </li>
         <li class="nav-item">

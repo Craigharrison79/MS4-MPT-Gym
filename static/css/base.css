@@ -8,15 +8,33 @@ body {
     height: calc(100vh - 164px); /* - height of header */
 }
 
-.text-color {
-    color: black;
+#main-nav {
+    z-index: 999;
 }
 
-/* Media */
+.shadow-box {
+    background-color: black !important;
+    opacity: 50%;
+    height: 100%;
+}
 
-@media (min-width: 992px) {
-    /* push body down to the bottom of main page header */
-    .header-container {
-        padding-top: 164px;
-    }
+.text-color {
+    color: white;
+}
+
+/* CI code from boutique ado */
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+/* Return from shopping bag to url page */
+.btn-black {
+    background: black;
+    color: white;
 }
