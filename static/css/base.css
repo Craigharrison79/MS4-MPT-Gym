@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px); /* - height of header */
+}
+
+.text-color {
+    color: black;
+}
+
+/* Media */
+
+@media (min-width: 992px) {
+    /* push body down to the bottom of main page header */
+    .header-container {
+        padding-top: 164px;
+    }
+}

@@ -1,7 +1,43 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+{% endblock page_header %}
+
 {% block content %}
 
-<h1 class="text-success">Up and running!</h1>
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col my-5 d-none d-sm-block">
+                <h4>
+                    <a href="" class="text-uppercase py-3 ">Sign Up Now</a>
+                </h4>
+            </div>
+            <div class="col-lg-4 my-5">
+                <div class="my-5">
+                    <h3 class="text-center text-uppercase text-color">Who are we?</h3> 
+                </div>
+                <div>
+                    <p class="text-color">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio consequuntur quam ex 
+                        incidunt nesciunt? Tempora labore provident culpa nemo officiis laudantium cupiditate 
+                        ipsam adipisci consectetur aut, beatae aliquam natus quas maiores nobis earum 
+                        perspiciatis nesciunt repellendus similique iste quisquam in, dolor numquam? Quasi 
+                        rem perspiciatis quos esse quam in?</p>
+                </div>
+                <div class="d-block d-sm-none text-center">
+                    <h4>
+                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Sign Up Now</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
