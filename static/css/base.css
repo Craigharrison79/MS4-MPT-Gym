@@ -5,7 +5,8 @@ html {
 body {
     background: url('/media/home-gym-photo.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px); /* - height of header */
+    height: calc(100vh-164px);
+    /*height: calc(100vh - 164px);  - height of header */
 }
 
 #main-nav {
@@ -19,7 +20,7 @@ body {
 }
 
 .text-color {
-    color: white;
+    color: white
 }
 
 /* CI code from boutique ado */
@@ -37,4 +38,15 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+
+
+/* Media */
+
+@media (min-width: 992px) {
+    /* push body down to the bottom of main page header */
+    .header-container {
+        padding-top: 164px;
+    }
 }
