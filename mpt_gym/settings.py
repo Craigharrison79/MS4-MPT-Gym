@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # Site apps
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [

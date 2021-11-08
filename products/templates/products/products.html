@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+{% endblock page_header %}
+
+{% block content %}
+
+<div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="text-white">Products</h2>
+                    <hr class="text-white">
+                </div>
+            </div>
+            <div class="row">
+                <div class="service-container col-10 offset-1">
+                    <div class="row mt-1 mb-2"></div>
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="card h-100 border-1 shadow-box">
+                                    <div class="p-2">
+                                        {% if product.image %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ service.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid" src="" alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
+                                    </div>
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0 text-white">{{ product.name }}</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
