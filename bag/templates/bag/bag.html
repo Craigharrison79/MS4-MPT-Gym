@@ -26,6 +26,11 @@
         <div class="row">
             <div class="col ">
                 {% if bag_items %}
+                {{ bag_items }}
+                                <br>
+                                <br>
+                                {{ request.session.bag }}
+                                    <tr>
                     <div class="table-responsive rounded">
                         <div class="table-responsive rounded">
                             <table class="table table-sm table-borderless">
@@ -40,7 +45,6 @@
                                 </thead>
     
                                 {% for item in bag_items %}
-                                    <tr>
                                         <td class="p-3 w-25">
                                             <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                         </td>
