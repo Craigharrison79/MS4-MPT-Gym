@@ -41,6 +41,12 @@ body {
     color: white;
 }
 
+/* CI code from boutique ado */
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 
 
 /* Media */
