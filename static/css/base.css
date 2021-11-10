@@ -2,22 +2,21 @@ html {
     height: 100%;
 }
 
-body {
+/*body {
     background: url('/media/home-gym-photo.jpg') no-repeat center center fixed;
     background-size: cover;
-    /*height: calc(100vh-164px);*/
-    height: 100vh
-}
+    height: calc(100vh-164px);
+}*/
 
 #main-nav {
-    z-index: 999;
+    z-index: 9;
 }
 
 
 .shadow-box {
     background-color: black !important;
     opacity: 50%;
-    height: 100%;
+    height: 60%;
 }
 
 .text-color {
@@ -41,11 +40,28 @@ body {
     color: white;
 }
 
-/* CI code from boutique ado */
+/* CI code from boutique ado  */
 .btt-link,
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* --CI code from boutique ado -- bootstrap toasts --*/
+
+.message-container {
+    position: fixed;
+    top: 164px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 
@@ -57,3 +73,4 @@ body {
         padding-top: 164px;
     }
 }
+
