@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
+    </div>
+{% endblock page_header %}
+
+{% block content %}
+
+<div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="text-white">Clubs</h2>
+                    <hr class="text-white">
+                </div>
+            </div>
+            <div class="row">
+                <div class="service-container col-10 offset-1">
+                    <div class="row mt-1 mb-2"></div>
+                    <div class="row">
+                       {% for club in clubs %}
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                <div class="card h-100 border-1 shadow-box">
+                                    
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0 text-white">{{ club.club }}</p>
+                                        <p class="mb-0 text-white">{{ club.phone_number }}</p>
+                                        <p class="mb-0 text-white">{{ club.street_address }}</p>
+                                        <p class="mb-0 text-white">{{ club.town_or_city }}</p>
+                                        <a href="{% url 'club_detail' club.id %}">click here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    
+
+{% endblock %}
