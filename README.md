@@ -277,3 +277,9 @@ Log onto Heroku and to create an app by clicking on the new app button.
 #### Java Script
 
 #### Python code
+
+
+Issue
+
+dropdown menu
+bs need to be added, to get everything to work.
