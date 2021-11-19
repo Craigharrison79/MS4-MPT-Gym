@@ -283,3 +283,5 @@ Issue
 
 dropdown menu
 bs need to be added, to get everything to work.
+
+uuid on product when coming to CRUD - some change back from UUID to normal database set id
