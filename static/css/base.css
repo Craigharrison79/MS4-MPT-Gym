@@ -47,6 +47,10 @@ body {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 /* --CI code from boutique ado -- bootstrap toasts --*/
 
 .message-container {
