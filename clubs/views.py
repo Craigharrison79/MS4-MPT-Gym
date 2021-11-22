@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Club
+from .models import Club, Personal_Trainer
 
 
 # Create your views here.
@@ -22,8 +22,11 @@ def club_detail(request, club_id):
     """
 
     club = get_object_or_404(Club, pk=club_id)
-
+    pts = Personal_Trainer.objects.all()
+    
     context = {
         'club': club,
+        'pts': pts,
     }
     return render(request, 'clubs/club_detail.html', context)
+ 
