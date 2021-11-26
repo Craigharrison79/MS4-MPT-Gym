@@ -2,68 +2,111 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
-    </div>
-{% endblock %}
-
-{% block content %}
-
-<div class="container-fluid">
+<div class="container header-container">
     <div class="row">
-        <!-- service col -->
         <div class="col">
-            <div class="row">
-                <div class="col text-center">
-                    <h2 class="text-white">{{ club.club }}</h2>
-                    <hr class="text-white">
-                </div>
-            </div>
-            <div class="row">
-                <div class="service-container col-12 offset-4">
-                    <div class="row mt-1 mb-2"></div>
-
-
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                                <div class="card h-100 border-1">
-                                    <div class="card-body pb-0">
-                                        <p class="mb-0">{{ club.town_or_city }}</p>
-                                    </div>
-                                    <div class="card-footer bg-white pt-0 border-0">
-                                        <div class="row">
-                                            <div class="col">
-                                                <p>{{ club.street_address }}</p>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col">
-                                                <p>{{ club.phone_number }}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                {% for pt in pts %}
-                                                    {% if club == pt.club %}
-                                                        <p>{{pt.full_name}}</p>
-                                                       
-                                                    {% endif %}
-                                                {% endfor %}
-                                            </div>
-
-                                        </div>
-                                    </div>  
-                                </div>
-                            </div>
-                </div>
-            </div>
 
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid full-screen">
+    <section class="mt-1">
+        <div class="row">
+            <div class="overlay"></div>
+            <!-- service col -->
+            <div class="col">
+                <div class="row">
+                    <div class="col text-center pt-3">
+                        <h2 class="text-white">{{ club.club }}</h2>
+                        <hr class="text-white">
+                    </div>
+                </div>
+                <section class="container col-12">
+                    <div class="row mt-1 mb-2">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                            <div class="card mb-3 base-color">
+                                <img src="https://res.cloudinary.com/hfn/image/upload/q_auto/v1/webimages/prod/sats_se_globalassets/traningscenter/centerbilder/carousel/sweden/malmo/sats-malmo-city/malmo_city_fitness3.jpg"
+                                    class="card-img-top p-2" alt="...">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-white">{{ club.club }}</h5>
+                                    <p class="mb-2 ">{{ club.phone_number }}</p>
+                                    <p class="mb-2">{{ club.street_address }}</p>
+                                    <p class="mb-2">{{ club.city_or_town }}</p>
+                                    <p class="mb-2">{{ club.postcode }}</p>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col text-center">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            Opening Times
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- personal trainer section-->
+                        <div class="col">
+                            <div class="col text-center pt-3">
+                                <h4 class="text-white">Personal Trainers</h>
+                                <hr class="text-white">
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-2 personal-trainers">
+                                {% for pt in pts %}
+                                     {% if club == pt.club %}
+                                <div class="col">
+                                    <div class="card text-center pt-container base-color">
+                                        <div class="rounded-image">
+                                            <picture>
+                                                <img src="https://res.cloudinary.com/hfn/image/upload/q_auto/v1/webimages/prod/sats_se_globalassets/traning/personlig-traning/pt/q1-2020/craig_harrison_pt.jpg" class="card-img-top" alt="...">
+                                            
+                                            </picture>
+                                        </div>
+                                        
+                                            <div class="card-body">
+                                            <h5 class="card-title text-white">{{ pt.full_name }}</h5>
+                                            
+                                            <p class="card-text"><small>{{ pt.speciality }}</small></p>
+                                                      
+                                            <h6 class="text-white">{{ pt.phone_number }}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </section>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content base-color">
+        <div class="modal-header">
+          <h5 class="modal-title text-white" id="exampleModalLabel">Opening Hours</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Monday-Thursday: <span>6:00-22:00</span></p>
+            <p>Friday: <span>6:00-20:00</span></p>
+            <p>Saturday: <span>8:00-18:00</span></p>
+            <p>Friday: <span>9:00-19:00</span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 {% endblock %}

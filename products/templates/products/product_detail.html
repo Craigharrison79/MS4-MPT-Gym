@@ -10,25 +10,45 @@
         <!-- service col -->
         <div class="col">
             <div class="row">
-                <div class="col text-center">
-                    <h2 class="text-white">{{ product.name }}</h2>
-                    <hr class="text-white">
+                <div class="col text-center mt-3">
+                    <h2 class="text-black text-uppercase">{{ product.name }}</h2>
+                    <hr class="text-black">
                 </div>
             </div>
             <!-- sidenav links tags -->
             <div class="row">
-                <div class="col col-sm-6 col-12 mb-3 p-3 breadcrumb" style="--bs-breadcrumb-divider: '|';">
+                <div class="col col-sm-8 col-12 mb-3 p-3 breadcrumb" style="--bs-breadcrumb-divider: '|';">
                     <p class="breadcrumb-item small p-1 "><a class="text-danger text-uppercase text-decoration-none"
                             href="{% url 'products' %}?category={{ product.category.name }}">
                             {{ product.category.friendly_name }}</a></p>
                     <p class="breadcrumb-item p-1 text-success small text-capitalize text-decoration-none active"
                         aria-current="page">{{ product.name }}</p>
                 </div>
+                <div class="col col-sm-4 col-12 mb-3 p-3">
+                    {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <span>Click here to </span>
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                    <span> /</span>
+                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                <span> this product!</span>
+                                </small>
+                            {% endif %}
+                </div>
+                
             </div>
         </div>
     </div>
-    <div class="row">
+    <section class="row">
+        
+            <div class="row">
+                
+                
+            </div>
+        
+    
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            
             <div class="image-container my-5">
                 {% if product.image %}
                     <a href="{{ product.image.url }}" target="_blank">
@@ -39,38 +59,69 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                 {% endif %}
+                
+                <div class="accordion mt-3" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Description:
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>{{ product.description}}</strong>
+                        </div>
+                      </div>
+                    </div>
+                    {% if product.ingredients%}
+                    <div class="accordion-item mt-2">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Ingredients
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>{{ product.ingredients}}</strong> 
+                        </div>
+                      </div>
+                    </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
+
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0 text-white">{{ product.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold text-white">${{ product.price }}</p>
+                <small><p class="mb-0 text-black">{{ product.sku }}</p></small>
+                <h4 class="text-uppercase">{{ product.name }}</h4>
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                        <i class="fas fa-tag mr-1 text-white"></i>{{ product.category.friendly_name }}
+                        <i class="fas fa-tag mr-1 text-black"></i> {{ product.category.friendly_name }}
                     </a>
                 </p>
                 {% endif %}
                 {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1 text-white"></i>{{ product.rating }} / 5</small>
+                    <small class="text-muted"><i class="fas fa-star mr-1 text-black"></i>{{ product.rating }} / 5</small>
                 {% else %}
-                    <small class="text-muted text-white">No Rating</small>
+                    <small class="text-muted text-black">No Rating</small>
                 {% endif %}
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_product' product.id %}">Edit</a>
-                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                        </small>
+                
+                <hr>
+                <p class="lead mb-0 text-left font-weight-bold text-black">${{ product.price }}</p>
+                <hr>
+                    {% if product.number_of_sessions %}
+                    <p class="lead mb-0 text-left font-weight-bold text-black">Package size: {{ product.number_of_sessions }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold text-black">{{ product.price_per_session }}kr of each session</p>
                     {% endif %}
-                <p class="mt-3 text-white">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         {% with product.has_sizes as s %} 
                         {% if s %}
                             <div class="col-12">
-                                <p><strong class="text-white">Size:</strong></p>
+                                <p><strong class="text-black">Size:</strong></p>
                                 <select class="form-control rounded-0 w-50 text-black" name="product_size" id='id_product_size'>
                                     <option value="xs">XS</option>
                                     <option value="s">S</option>
@@ -80,8 +131,13 @@
                                 </select>
                             </div>
                         {% endif %}
+                        <div class="pt-3">
+                            <hr>
+                        </div>
+                    </div>
+                    
                         <div class="col-12">
-                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <p><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -113,7 +169,7 @@
                                 <span class="icon">
                                     <i class="fas fa-chevron-left text-white"></i>
                                 </span>
-                                <span class="text-uppercase text-white">Keep Shopping</span>
+                                <span class="text-uppercase text-black">Keep Shopping</span>
                             </a>
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
@@ -123,7 +179,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 {% endblock %}
 

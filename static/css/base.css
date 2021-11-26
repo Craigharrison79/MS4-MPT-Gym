@@ -2,25 +2,62 @@ html {
     height: 100%;
 }
 
-body {
+.hero-block {
     background: url('/media/home-gym-photo.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh-164px);
-}
-
-#main-nav {
-    z-index: 0;
-}
-
-
-.shadow-box {
-    background-color: black !important;
-    opacity: 50%;
     height: 100%;
 }
 
+.full-screen {
+    background: url('/media/home-gym-photo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh !important;
+}
+
+p {
+    color: white !important;
+}
+
+.personal-trainers .pt-container .rounded-image {
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.navbar-unhide-fix {
+    margin-top: 140px;
+}
+
+.base-color {
+    background-color: #0d2134 !important;
+}
+
+.photo-size{
+    height: 500px;
+}
+  
+#main-nav {
+    background-color: #0d2134 !important;
+    z-index: 0;
+}
+
+.box-background {
+    background-color: #0d2134 !important;
+}
+
+/*.shadow-box {
+    background-color: black !important;
+    opacity: 50%;
+    height: 100vh;
+}*/
+
 .text-color {
-    color: white
+    color: white !important;
+}
+
+.narbar-light .navbar-nav .nav-link {
+    color: white !important;
 }
 
 /* CI code from boutique ado */
@@ -80,6 +117,16 @@ input[name='q']::placeholder {
     top: -10px;
     right: 36px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+
 
 /* Convenience classes - colors copied from Bootstrap 
     -- CI code from boutique ado-- */
@@ -202,12 +249,12 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+
 /* Media Queries */
 
 @media (min-width: 992px) {
     /* push body down to the bottom of main page header */
     .header-container {
-        padding-top: 164px;
+        padding-top: 144px;
     }
 }
-

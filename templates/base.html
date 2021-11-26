@@ -41,13 +41,13 @@
   </head>
 
   <body>
-    <header class="container-fluid fixed-top">
-      <div class="row pt-lg-3 d-none d-lg-flex bg-light bg-gradient">
+    <header class="container-fluid base-color">
+      <div class="row pt-lg-3 d-none d-lg-flex">
         <!-- Search Bar-->
         <div class="col-12 col-lg-4 text-center">
           <form method="" action="{% url 'products' %}" class="d-flex">
             <input class="form-control me-2" type="search" name="q" placeholder="Search for Products" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-light" type="submit">Search</button>
           </form>
         </div>
         <!-- Logo -->
@@ -58,7 +58,7 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item nav-item dropdown">
-                  <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="text-color nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <div class="text-center">
                           <div><i class="fas fa-user fa-lg"></i></div>
                           <p class="my-0">My Account</p>
@@ -80,7 +80,7 @@
             </li>
             <!-- Shopping bag -->
             <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link text-color" href="{% url 'view_bag' %}">
                 <div class="text-center">
                   <div><i class="fas fa-shopping-bag fa-lg"></i><span class= "text-center" >
                     {{ product_count }}</span>
@@ -98,7 +98,7 @@
           </ul>
         </div>
       </div>
-      <div class="row bg-light bg-gradient">
+      <div class="row">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -133,6 +133,28 @@
     {% endblock %}
 
     {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+
+    <footer class="text-white text-center footer-style box-background">
+      <div class="row mt-2">
+        <div class="footer-heading pt-4">
+          <h4>MPT Gym</h4>
+        </div>
+        <div class="social my-2">
+          <span>
+            <a href="http://www.facebook.com" target="_blank" rel="noopener">
+              <i class="fab fa-facebook  text-color"></i>
+            </a>
+          </span>
+        </div>
+        <div class="copy-right my-2">
+          <p>Copyright © MPT Gym 2021</p>
+        </div>
+      </div>
+    </footer>
+
     {% endblock %}
 
     {% block postloadjs %}

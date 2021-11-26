@@ -12,34 +12,65 @@
 {% endblock page_header %}
 
 {% block content %}
+    <section class="container-fluid container-landing-page mt-1">
+        <div class="row photo-size">
+            <div class="col col-lg-8 col-md-8 hero-block">
 
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col my-5 d-none d-sm-block">
-                <h4>
-                    <a href="" class="text-uppercase py-3 ">Sign Up Now</a>
-                </h4>
             </div>
-            <div class="col-lg-4 shadow-box">
+                <div class="col col-lg-4 box-background text-center text-color pt-5">
+                    <div class="my-5 pt-3">
+                        <h3 class="text-uppercase">Who are we?</h3> 
+                    </div>
+                    <div>
+                        <p>Welcome to leading training company in Sweden! With us, 
+                            you find experienced personal trainer and inspiring employees to help you 
+                            reach your training goals.</p>
+                    </div>
+                    <div class="col my-5">
+                        <h4>
+                            <a href="{% url 'clubs' %}" class="text-uppercase py-3 btn btn-light">Check out the Clubs</a>
+                            
+                        </h4>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="container-fluid base-color">
+        <div class="row text-center text-color my-1 base-color">
+            <div class="col mt-5 base-color">
+                <h3 class="text-uppercase">Make your best investment ever!</h3> 
+            </div>
+                <div class="mb-5 base-color">
+                    <p>With us, you get a strong mind and body and feel better than you 
+                        have in years - find the enjoyment in training. Become member today and get started with us!
+                    </p>
+                    <h4>
+                        <a href="{% url 'account_signup' %}" class="text-uppercase py-3 btn btn-light">Sign Up Now</a>
+                    </h4>
+                </div>  
+        </div>
+    </section>
+    <section class="container-fluid">
+        <div class="row photo-size">
+            <div class="col col-lg-4 box-background text-center text-color">
                 <div class="my-5">
-                    <h3 class="text-center text-uppercase text-color">Who are we?</h3> 
+                    <h3 class="text-center text-uppercase text-color pt-5 mt-5">Personal Trainer</h3> 
                 </div>
-                <div>
-                    <p class="text-color">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio consequuntur quam ex 
-                        incidunt nesciunt? Tempora labore provident culpa nemo officiis laudantium cupiditate 
-                        ipsam adipisci consectetur aut, beatae aliquam natus quas maiores nobis earum 
-                        perspiciatis nesciunt repellendus similique iste quisquam in, dolor numquam? Quasi 
-                        rem perspiciatis quos esse quam in?</p>
+                    <div>
+                        <p class="text-color">With the help of a personal trainer and goal-oriednted training,
+                            anything is possible.
+                        </p>
+                    </div>
+                <div class="col my-5">
+                    <h4>
+                        <a href="{% url 'products' %}?category=Personal Training" class="text-uppercase py-3 btn btn-light">Buy Personal Training</a>
+                    </h4>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="d-block d-sm-none text-center">
-                <h4>
-                    <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Sign Up Now</a>
-                </h4>
-            </div>
-        </div>
-    </div>
+                <div class="col col-lg-8 col-md-8 hero-block">
 
+                </div>
+        </div>
+    </section>
+    
 {% endblock %}

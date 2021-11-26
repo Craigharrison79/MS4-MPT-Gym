@@ -15,6 +15,8 @@ class PersonalTrainerAdmin(admin.ModelAdmin):
     list_display = (
         'club',
         'full_name',
+        'phone_number',
+        'image',
     )
 
 
