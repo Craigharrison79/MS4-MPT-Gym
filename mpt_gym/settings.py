@@ -23,7 +23,7 @@ SECRET_KEY = 'django-insecure-)gd1jb&mv1gdt&qa6alpf15t#de2#l=xpf#a&vtdp+t3r*=qv7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ms4-mpt-gym.heroku.com', 'localhost']
 
 
 # Application definition
