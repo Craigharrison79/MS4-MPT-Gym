@@ -109,7 +109,7 @@
                 {% endif %}
                 
                 <hr>
-                <p class="lead mb-0 text-left font-weight-bold text-black">${{ product.price }}</p>
+                <p class="lead mb-0 text-left font-weight-bold text-black">{{ product.price }} kr</p>
                 <hr>
                     {% if product.number_of_sessions %}
                     <p class="lead mb-0 text-left font-weight-bold text-black">Package size: {{ product.number_of_sessions }}</p>
@@ -130,6 +130,9 @@
                                     <option value="xl">XL</option>
                                 </select>
                             </div>
+                        {% endif %}
+                        {% if product.weight %}
+                        <h5 class="text-black"><strong>{{ product.weight }}</strong></h5>
                         {% endif %}
                         <div class="pt-3">
                             <hr>

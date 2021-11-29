@@ -1,0 +1,1 @@
+web: gunicorn mpt_gym.wsgi:application

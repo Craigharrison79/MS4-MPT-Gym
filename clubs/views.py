@@ -29,4 +29,3 @@ def club_detail(request, club_id):
         'pts': pts,
     }
     return render(request, 'clubs/club_detail.html', context)
- 
