@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "supplements",
+            "friendly_name": "supplements"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "nutrition",
+            "friendly_name": "nutrition"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "training_equipment",
+            "friendly_name": "training_equipment"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "shakers_bottles",
+            "friendly_name": "shakers_bottles"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "massage",
+            "friendly_name": "massage"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "personal_training",
+            "friendly_name": "personal_training"
+        }
+    }
+]

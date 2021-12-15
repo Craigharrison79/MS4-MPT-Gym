@@ -1,6 +1,4 @@
 from django.db import models
-# For unique Id
-import uuid
 
 
 # Create your models here.

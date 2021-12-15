@@ -1,6 +1,10 @@
 # [MPT GYM]()
 
-Info about project
+MPT Gym is a website and Ecommerce site for a personal training company.  It was created for a milestone project 4 as part of Code Insitute’s full stack development course.
+
+This fully interactive and responsive website was build and developed using HTML, CSS, Python on a Django framework with a little JavaScript thrown in.
+
+View this project live here
 
 ![MPT GYM](Am-I-Responsive)
 View the site: [MPT GYM]()
@@ -30,17 +34,31 @@ View the site: [MPT GYM]()
 
 ## Strategy
 
-MPT Gym
+As a personal trainer I wanted to build a fictional personal training website and build also add an Ecommerce store to allow extra company to sell personal trainer package and well as giving the company’s client base the opportunity to purchase products that the company promote.
 
 ## Goals
 
 #### Owner goal
 
+- To increase a online presence
+- To drive and connect to there members
+- To convert new customer
+- To add a new way of build revenue in the company
+- 
+
 #### User goals
+
+- To access the company’s site across different devices.
+- To find a gym or personal trainer in their citys or towns.
+- To buy products/services from the company without having to the premises.
+- To contact the gym with questions.
 
 ## **User stories:**
 
 - First time users
+
+    - Would like a easily site to navigate and easily to understand what the user is looking at or for.
+    - 
 
 - Returning users
     
@@ -95,7 +113,13 @@ Photo by <a href="https://unsplash.com/@krakenimages?utm_source=unsplash&utm_med
 online training one
 Photo by <a href="https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kari Shea</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
-  
+  massage
+  Photo by Ryutaro Tsukata from Pexels
+  https://www.pexels.com/photo/male-doctor-massaging-shoulders-of-patient-5473182/
+
+  food
+  Photo by Yaroslav Shuraev from Pexels
+  https://www.pexels.com/photo/person-holding-white-printer-paper-8844387/
   
 
 # Features
@@ -262,6 +286,7 @@ Log onto Heroku and to create an app by clicking on the new app button.
 [CodeInstitue]() : template of the site, and code!
 
 ## Inspiration for Website
+https://www.zestwellnessnutrition.com/purchase-new/60-min-virtual-11-coaching-session
 
 ## Acknowledgments
 
