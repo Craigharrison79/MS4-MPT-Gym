@@ -7,7 +7,7 @@
             "club": 2,
             "speciality1": "Premier Training International in London",
             "speciality2": "Precision Nutrition Coach Level 1",
-            "social_link_1": "",
+            "social_link_1": "https://www.instagram.com/",
             "phone_number": "0732877855",
             "image": ""
         }
@@ -20,22 +20,22 @@
             "club": 2,
             "speciality1": "Diploma of Sport Development, Queensland Australia",
             "speciality2": "Strength and conditioning techniques",
-            "social_link_1": "",
+            "social_link_1": "https://www.snapchat.com/",
             "phone_number": "0789356122",
-            "image": ""
+            "image": "sara-nordquist.webp"
         }
     },
     {
         "pk": 3,
         "model": "clubs.personal_trainer",
         "fields": {
-            "full_name": "Stafan Werneman",
+            "full_name": "Stefan Werneman",
             "club": 1,
             "speciality1": "Personal trainer The Academy",
             "speciality2": "Pregnancy training",
-            "social_link_1": "",
+            "social_link_1": null,
             "phone_number": "0799467321",
-            "image": ""
+            "image": "stefan-wernman.webp"
         }
     },
     {
@@ -46,9 +46,9 @@
             "club": 1,
             "speciality1": "Licensed strength training instructor The Academy",
             "speciality2": "Massage therapist",
-            "social_link_1": "",
+            "social_link_1": "https://www.reddit.com/",
             "phone_number": "0784773311",
-            "image": ""
+            "image": "jonas-gardström.webp"
         }
     },
     {
@@ -59,22 +59,9 @@
             "club": 1,
             "speciality1": "Lic Personal Trainer SCE / SAFE",
             "speciality2": "Lic Dietician The Academy",
-            "social_link_1": "",
+            "social_link_1": null,
             "phone_number": "0773492762",
-            "image": ""
-        }
-    },
-    {
-        "pk": 5,
-        "model": "clubs.personal_trainer",
-        "fields": {
-            "full_name": "Robin Backman",
-            "club": 3,
-            "speciality1": "Lic Personal Trainer SCE / SAFE",
-            "speciality2": "Lic Dietician The Academy",
-            "social_link_1": "",
-            "phone_number": "0773492762",
-            "image": ""
+            "image": "anna-frid.webp"
         }
     },
     {
@@ -85,9 +72,9 @@
             "club": 3,
             "speciality1": "Lic Personal Trainer SCE / SAFE",
             "speciality2": "Eleiko Strength Coach Level 1- Olympic lifts",
-            "social_link_1": "",
+            "social_link_1": "https://twitter.com/?lang=en",
             "phone_number": "0783462762",
-            "image": ""
+            "image": "simon-sjöberg.webp"
         }
     },
     {
@@ -98,9 +85,9 @@
             "club": 3,
             "speciality1": "Health educator - bachelor's degree in sports science with a focus on health",
             "speciality2": "Stress management",
-            "social_link_1": "",
+            "social_link_1": "https://www.facebook.com/",
             "phone_number": "0797552414",
-            "image": ""
+            "image": "tarik-karem.webp"
         }
     },
     {
@@ -111,9 +98,9 @@
             "club": 3,
             "speciality1": "Licensed Personal Trainer, SAFE",
             "speciality2": "Powerlifting",
-            "social_link_1": "",
+            "social_link_1": "https://www.instagram.com/",
             "phone_number": "0733366113",
-            "image": ""
+            "image": "fredrik-kyling.webp"
         }
     },
     {
@@ -124,9 +111,9 @@
             "club": 4,
             "speciality1": "Licensed Personal Trainer, SAFE",
             "speciality2": "Licensed Dietician",
-            "social_link_1": "",
+            "social_link_1": "https://twitter.com/?lang=en",
             "phone_number": "0732799734",
-            "image": ""
+            "image": "johanna-berg.webp"
         }
     },
     {
@@ -137,9 +124,9 @@
             "club": 4,
             "speciality1": "Licensed Personal Trainer, SAFE",
             "speciality2": "Practical Injury Science 1, Human Performance",
-            "social_link_1": "",
+            "social_link_1": null,
             "phone_number": "0798173624",
-            "image": ""
+            "image": "tove-rizzo.webp"
         }
     },
     {
@@ -150,9 +137,22 @@
             "club": 4,
             "speciality1": "Licensed Personal Trainer, SAFE",
             "speciality2": "Trained strength training instructor for children and adolescents",
-            "social_link_1": "",
+            "social_link_1": "https://www.facebook.com/",
             "phone_number": "0722762311",
-            "image": ""
+            "image": "mikael-dunder.webp"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "clubs.personal_trainer",
+        "fields": {
+            "full_name": "Robin Backman",
+            "club": 3,
+            "speciality1": "Lic Personal Trainer SCE / SAFE",
+            "speciality2": "Lic Dietician The Academy",
+            "social_link_1": null,
+            "phone_number": "0773492762",
+            "image": "robin-backman.webp"
         }
     }
 ]
