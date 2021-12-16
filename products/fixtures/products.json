@@ -14,8 +14,7 @@
             "weight": "2.5",
             "image_url": null,
             "image": "whey-protein-unflavoured.webp",
-            "tags": 1,
-            "ingredinets": "Ingredients: Whey Protein Concentrate (Milk) [Contains Emulsifiers; Sunflower Lecithin, Soya Lecithin] (100%).",
+            "ingredients": "Ingredients: Whey Protein Concentrate (Milk) [Contains Emulsifiers; Sunflower Lecithin, Soya Lecithin] (100%).",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -35,8 +34,7 @@
             "weight": "2.5",
             "image_url": null,
             "image": "whey-protein-caramel.webp",
-            "tags": 1,
-            "ingredinets": "Whey Protein Concentrate (Milk) (96%), Emulsifier (Soy Lecithin), Flavouring, Colour (E150c), Sweetener (Sucralose)",
+            "ingredients": "Whey Protein Concentrate (Milk) (96%), Emulsifier (Soy Lecithin), Flavouring, Colour (E150c), Sweetener (Sucralose)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -56,8 +54,7 @@
             "weight": "2.5",
             "image_url": null,
             "image": "whey-protein-chocolate.webp",
-            "tags": 1,
-            "ingredinets": "Whey Protein Concentrate (Milk), Emulsifier (Soy Lecithin), Fat Reduced Cocoa Powder, Flavouring, Sweetener (Sucralose)",
+            "ingredients": "Whey Protein Concentrate (Milk), Emulsifier (Soy Lecithin), Fat Reduced Cocoa Powder, Flavouring, Sweetener (Sucralose)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -77,8 +74,7 @@
             "weight": "2.5",
             "image_url": null,
             "image": "whey-protein-strawberry.webp",
-            "tags": 1,
-            "ingredinets": "Whey Protein Concentrate (Milk) (96%), Emulsifier (Soy Lecithin), Flavouring, Colour (Beetroot Red), Sweetener (Sucralose)",
+            "ingredients": "Whey Protein Concentrate (Milk) (96%), Emulsifier (Soy Lecithin), Flavouring, Colour (Beetroot Red), Sweetener (Sucralose)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -98,8 +94,7 @@
             "weight": "2.5",
             "image_url": null,
             "image": "whey-protein-vanilla.webp",
-            "tags": 1,
-            "ingredinets": "Whey Protein Concentrate (Milk) [Contains Emulsifiers; Sunflower Lecithin, Soya Lecithin] (96%), Flavouring, Sweetener (Sucralose).",
+            "ingredients": "Whey Protein Concentrate (Milk) [Contains Emulsifiers; Sunflower Lecithin, Soya Lecithin] (96%), Flavouring, Sweetener (Sucralose).",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -119,8 +114,7 @@
             "weight": "1",
             "image_url": null,
             "image": "bcaa-cola.webp",
-            "tags": 4,
-            "ingredinets": "L-Leucine (37%), Isoleucine (18.5%), Valine (18.5%), Flavouring, Apple Extract, Acid (Citric Acid), Sweetener (Sucralose)",
+            "ingredients": "L-Leucine (37%), Isoleucine (18.5%), Valine (18.5%), Flavouring, Apple Extract, Acid (Citric Acid), Sweetener (Sucralose)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -140,8 +134,7 @@
             "weight": "1",
             "image_url": null,
             "image": "bcaa-tropical.webp",
-            "tags": 4,
-            "ingredinets": "L-Leucine (42%), Isoleucine (21%), Valine (21%), Flavouring, Curcuma Oil Extract, Acid (Citric Acid), Sweetener (Sucralose)",
+            "ingredients": "L-Leucine (42%), Isoleucine (21%), Valine (21%), Flavouring, Curcuma Oil Extract, Acid (Citric Acid), Sweetener (Sucralose)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -161,8 +154,7 @@
             "weight": "1",
             "image_url": null,
             "image": "bcaa-unflavoured.webp",
-            "tags": 4,
-            "ingredinets": "L-Leucine (50%), Isoleucine (25%), Valine (25%)",
+            "ingredients": "L-Leucine (50%), Isoleucine (25%), Valine (25%)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -182,8 +174,7 @@
             "weight": "1",
             "image_url": null,
             "image": "bcaa-watermelon.webp",
-            "tags": 4,
-            "ingredinets": "L-Leucine (42%), Isoleucine (21%), Valine (21%), Flavouring, Colour (Beetroot Red), Acid (Citric Acid), Sweetener (Sucralose)",
+            "ingredients": "L-Leucine (42%), Isoleucine (21%), Valine (21%), Flavouring, Colour (Beetroot Red), Acid (Citric Acid), Sweetener (Sucralose)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -203,8 +194,7 @@
             "weight": "1",
             "image_url": null,
             "image": "creatine-tropical.webp",
-            "tags": 4,
-            "ingredinets": "Creapure Creatine Monohydrate (87%),  Flavouring (Acidity Regulator (Citric Acid),  Flavouring, Sweetener (Sucralose), Sunflower Oil, Colour (Beta Carotene).",
+            "ingredients": "Creapure Creatine Monohydrate (87%),  Flavouring (Acidity Regulator (Citric Acid),  Flavouring, Sweetener (Sucralose), Sunflower Oil, Colour (Beta Carotene).",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -224,8 +214,7 @@
             "weight": "1",
             "image_url": null,
             "image": "creatine-unflavoured.webp",
-            "tags": 4,
-            "ingredinets": "Creapure Creatine Monohydrate (100%)",
+            "ingredients": "Creapure Creatine Monohydrate (100%)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -245,8 +234,7 @@
             "weight": "1",
             "image_url": null,
             "image": "fish-oil.webp",
-            "tags": 1,
-            "ingredinets": "Omega 3 Fish Oil, Softgel (Gelatin, Glycerin, Purified Water), Antioxidant (Mixed Tocopherols), Refined Soyabean Oil",
+            "ingredients": "Omega 3 Fish Oil, Softgel (Gelatin, Glycerin, Purified Water), Antioxidant (Mixed Tocopherols), Refined Soyabean Oil",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -266,8 +254,7 @@
             "weight": "1",
             "image_url": null,
             "image": "multivitamin.webp",
-            "tags": 1,
-            "ingredinets": "Calcium (Calcium Carbonate), Vitamin C (L-Ascorbic Acid), Magnesium (Magnesium Oxide), Niacin (Nicotinamide), Ferrous (Ferrous Fumarate), Vitamin E (Dl-Alpha-Tocopheryl Acetate (contains soy)), Zinc (Zinc Oxide), Pantothenic Acid (D-Pantothenate, Calcium), Manganese (Manganese Citrate), Vitamin B2 (Riboflavin), Vitamin B6 (Pyridoxine Hydrochloride), Vitamin B1 (Thiamin Mononitrate), Copper (Copper Sulphate), Vitamin A (Retinyl Acetate), Folic Acid (Pteroylmonoglutamic Acid), Potassium (Potassium Iodide), Vitamin K (Phytomenadione), Selenium (Sodium Selenite), Biotion (D-Biotin), Chromium (Chromium (III) Chloride), Vitamin B12 (Cyanocobalamin), Vitamin D3 (Cholecalciferol), Bulking Agent (Hydroxypropyl Methylcellulose), Rice Flour, Anti-Caking Agents (Silicon Dioxide, Magnesium Stearate)",
+            "ingredients": "Calcium (Calcium Carbonate), Vitamin C (L-Ascorbic Acid), Magnesium (Magnesium Oxide), Niacin (Nicotinamide), Ferrous (Ferrous Fumarate), Vitamin E (Dl-Alpha-Tocopheryl Acetate (contains soy)), Zinc (Zinc Oxide), Pantothenic Acid (D-Pantothenate, Calcium), Manganese (Manganese Citrate), Vitamin B2 (Riboflavin), Vitamin B6 (Pyridoxine Hydrochloride), Vitamin B1 (Thiamin Mononitrate), Copper (Copper Sulphate), Vitamin A (Retinyl Acetate), Folic Acid (Pteroylmonoglutamic Acid), Potassium (Potassium Iodide), Vitamin K (Phytomenadione), Selenium (Sodium Selenite), Biotion (D-Biotin), Chromium (Chromium (III) Chloride), Vitamin B12 (Cyanocobalamin), Vitamin D3 (Cholecalciferol), Bulking Agent (Hydroxypropyl Methylcellulose), Rice Flour, Anti-Caking Agents (Silicon Dioxide, Magnesium Stearate)",
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -287,8 +274,7 @@
             "weight": null,
             "image_url": null,
             "image": "PT.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "10",
             "price_per_session": "1897.00"
         }
@@ -308,8 +294,7 @@
             "weight": null,
             "image_url": null,
             "image": "PT.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "25",
             "price_per_session": "2245.99"
         }
@@ -329,8 +314,7 @@
             "weight": null,
             "image_url": null,
             "image": "PT.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "50",
             "price_per_session": "2120.99"
         }
@@ -350,8 +334,7 @@
             "weight": null,
             "image_url": null,
             "image": "PT.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "50",
             "price_per_session": "3162.99"
         }
@@ -371,8 +354,7 @@
             "weight": null,
             "image_url": null,
             "image": "PT.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "25",
             "price_per_session": "3370.99"
         }
@@ -392,8 +374,7 @@
             "weight": null,
             "image_url": null,
             "image": "PT.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "10",
             "price_per_session": "2829.99"
         }
@@ -413,8 +394,7 @@
             "weight": null,
             "image_url": null,
             "image": "massage.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "10",
             "price_per_session": "1897.00"
         }
@@ -434,8 +414,7 @@
             "weight": null,
             "image_url": null,
             "image": "massage.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "25",
             "price_per_session": "2245.99"
         }
@@ -455,8 +434,7 @@
             "weight": null,
             "image_url": null,
             "image": "massage.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "50",
             "price_per_session": "2120.99"
         }
@@ -476,8 +454,7 @@
             "weight": null,
             "image_url": null,
             "image": "nutrition.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "1",
             "price_per_session": "750.00"
         }
@@ -497,8 +474,7 @@
             "weight": null,
             "image_url": null,
             "image": "nutrition.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "3",
             "price_per_session": "719.99"
         }
@@ -518,8 +494,7 @@
             "weight": null,
             "image_url": null,
             "image": "nutrition.webp",
-            "tags": 2,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": "5",
             "price_per_session": "699.99"
         }
@@ -539,8 +514,7 @@
             "weight": null,
             "image_url": null,
             "image": "protein-shakers.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -560,8 +534,7 @@
             "weight": null,
             "image_url": null,
             "image": "pro-shakesphere.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -581,8 +554,7 @@
             "weight": null,
             "image_url": null,
             "image": "men-lifting-gloves.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -602,8 +574,7 @@
             "weight": null,
             "image_url": null,
             "image": "c-lifting-gloves.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -623,8 +594,7 @@
             "weight": null,
             "image_url": null,
             "image": "c-gloves.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -644,8 +614,7 @@
             "weight": null,
             "image_url": null,
             "image": "muscle-roller.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -665,8 +634,7 @@
             "weight": null,
             "image_url": null,
             "image": "liquid-chalk.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -686,8 +654,7 @@
             "weight": null,
             "image_url": null,
             "image": "liquid-chalk.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }
@@ -707,8 +674,7 @@
             "weight": null,
             "image_url": null,
             "image": "recovery-ball.webp",
-            "tags": null,
-            "ingredinets": null,
+            "ingredients": null,
             "number_of_sessions": null,
             "price_per_session": null
         }

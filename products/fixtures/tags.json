@@ -3,32 +3,28 @@
         "pk": 1,
         "model": "products.tag",
         "fields": {
-            "name": "vegetarian",
-            "friendly_name": "vegetarian"
+            "name": "vegetarian"
         }
     },
     {
         "pk": 2,
         "model": "products.tag",
         "fields": {
-            "name": "personal training",
-            "friendly_name": "personal training"
+            "name": "personal training"
         }
     },
     {
         "pk": 3,
         "model": "products.tag",
         "fields": {
-            "name": "vegan",
-            "friendly_name": "vegan"
+            "name": "vegan"
         }
     },
     {
         "pk": 4,
         "model": "products.tag",
         "fields": {
-            "name": "gluten free",
-            "friendly_name": "gluten free"
+            "name": "gluten free"
         }
     }
 ]

@@ -4,7 +4,7 @@
         "model": "clubs.club",
         "fields": {
             "club": "malmö city",
-            "city_or_towm": 1,
+            "city_or_town": 1,
             "phone_number": "08-794326",
             "email": "infomalmocity@mptgym.se",
             "postcode": "211 42",
@@ -16,7 +16,7 @@
         "model": "clubs.club",
         "fields": {
             "club": "Fridhem",
-            "city_or_towm": 1,
+            "city_or_town": 1,
             "phone_number": "08-473662",
             "email": "infofridhem@mptgym.se",
             "postcode": "217 47",
@@ -28,7 +28,7 @@
         "model": "clubs.club",
         "fields": {
             "club": "Täby Centrum",
-            "city_or_towm": 2,
+            "city_or_town": 2,
             "phone_number": "08-638244",
             "email": "infotäby@mptgym.se",
             "postcode": "18343",
@@ -40,7 +40,7 @@
         "model": "clubs.club",
         "fields": {
             "club": "kungsholmen",
-            "city_or_towm": 2,
+            "city_or_town": 2,
             "phone_number": "08-463306",
             "email": "infokungsholmen@mptgym.se",
             "postcode": "112 64",
