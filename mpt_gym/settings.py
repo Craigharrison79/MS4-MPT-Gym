@@ -54,7 +54,6 @@ INSTALLED_APPS = [
 
     # Other
     'crispy_forms',
-    'storages',
 ]
 
 MIDDLEWARE = [
@@ -129,7 +128,7 @@ WSGI_APPLICATION = 'mpt_gym.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+                'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
