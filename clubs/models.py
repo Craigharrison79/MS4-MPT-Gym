@@ -26,8 +26,8 @@ class Personal_Trainer(models.Model):
     full_name = models.CharField(max_length=200)
     club = models.ForeignKey('Club', null=True, blank=True,
                                  on_delete=models.SET_NULL)
-    speciality1 = models.CharField(max_length=60, null=True, blank=True)
-    speciality2 = models.CharField(max_length=60, null=True, blank=True)
+    speciality1 = models.CharField(max_length=100, null=True, blank=True)
+    speciality2 = models.CharField(max_length=100, null=True, blank=True)
     phone_number = models.CharField(max_length=20, null=True, blank=True)
     social_link_1 = models.CharField(max_length=200, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
