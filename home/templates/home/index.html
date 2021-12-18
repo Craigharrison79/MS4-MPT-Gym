@@ -14,10 +14,10 @@
 {% block content %}
     <section class="container-fluid container-landing-page mt-1">
         <div class="row photo-size">
-            <div class="col col-lg-8 col-md-8 hero-block">
+            <div class="col-12 col-lg-8 col-md-8 hero-block">
 
             </div>
-                <div class="col col-lg-4 box-background text-center text-color pt-5">
+                <div class="col col-lg-4x box-background text-center text-color pt-5 d-none d-md-block">
                     <div class="my-5 pt-3">
                         <h3 class="text-uppercase">Who are we?</h3> 
                     </div>
@@ -50,11 +50,30 @@
                 </div>  
         </div>
     </section>
+    <section class="col-12 d-block d-sm-none text-center">
+        <div class="hero-block my-1">
+            <div class="pt-4 ">
+                <h3 class="text-uppercase text-white">Who are we?</h3> 
+            </div>
+            <div>
+                <p class="px-4">Welcome to leading training company in Sweden! With us, 
+                    you find experienced personal trainer and inspiring employees to help you 
+                    reach your training goals.</p>
+            </div>
+            <div class="col my-1">
+                <h4>
+                    <a href="{% url 'clubs' %}" class="text-uppercase pb-3 mb-3 btn btn-light">Check out the Clubs</a>
+                    
+                </h4>
+            </div>
+        </div>
+
+    </section>
     <section class="container-fluid">
         <div class="row photo-size">
             <div class="col col-lg-4 box-background text-center text-color">
                 <div class="my-5">
-                    <h3 class="text-center text-uppercase text-color pt-5 mt-5">Personal Trainer</h3> 
+                    <h3 class="text-center text-uppercase text-color pt-2 mt-2">Personal Trainer</h3> 
                 </div>
                     <div>
                         <p class="text-color">With the help of a personal trainer and goal-oriednted training,
@@ -67,7 +86,8 @@
                     </h4>
                 </div>
             </div>
-                <div class="col col-lg-8 col-md-8 hero-block">
+                <div class="col col-lg-8 col-md-8 hero-block d-none d-md-block" >
+                    
 
                 </div>
         </div>

@@ -3,15 +3,17 @@ html {
 }
 
 .hero-block {
-    background: url('/media/home-gym-photo.jpg') no-repeat center center fixed;
+    background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
 }
 
+
+
 .full-screen {
-    background: url('/media/home-gym-photo.jpg') no-repeat center center fixed;
+    background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh !important;
+    height: 100% !important;
 }
 
 p {
