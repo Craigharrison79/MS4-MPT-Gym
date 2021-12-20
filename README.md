@@ -6,8 +6,8 @@ This fully interactive and responsive website was build and developed using HTML
 
 View this project live here
 
-![MPT GYM](Am-I-Responsive)
-View the site: [MPT GYM]()
+[]()
+View the site: [MPT GYM](https://ms4-mpt-gym.herokuapp.com/)
 
 ## Table of Content
 
@@ -55,26 +55,110 @@ As a personal trainer I wanted to build a fictional personal training website an
 
 ## **User stories:**
 
-- First time users
+- **Website experience**
 
     - Would like a easily site to navigate and easily to understand what the user is looking at or for.
-    - 
+    - Would like a responsive website that can be access on different devices.
 
-- Returning users
+-  **Club / Personal Trainer experience**
+
+    - Would like to read about the clubs information and personal trainer work a specific club.
+    - Would like to read about the personal trainer specialty and contact information.
     
-- Frequent users:
+- **Shopping experience**
 
+    - Would like to have a overview on the product on offer.
+    - Would like to sort product out by specific list.
+    - Would like to view product by category and specific request to find things I'm looking for.
+    - Would to view basic information about the product about click on a item.
+    - World like to get further information about the product once I click on the item.
+    - Would like to select quantity of the item I would like to order.
+
+- **Checkout and shopping bag experience**
+
+    - Would like to reveiw my bag items to change or adjust as needed.
+    - Would like to see the overall grand total of my shopping bag.
+    - Would like a safe and secure way to enter payment information with it easy to follow and understand.
+    - Would like a way to safe my payment detail to make my next purchase quick and easy.
+    - Would like to receive a confirmation on my purchase order.
+
+- **Contact**
+
+    - Would like a way to contact the owner of the site to make queries or inquiry from orders to question about personal trainer / clubs.
+
+- **Registratinon and Profile**
+
+    - Would like to register for an account to save my payment details safely and securly.
+    - Would like my to edit my profile page to keep my contact information up to date.
+    - Would like to login and out of my profile safley.
+    - Would like a way to reset my password if I forgot my password.
+    - Would like to review my order history.
+    
+- **Site Management**
+
+    - Would like to add item to the site collection.
+    - Would like to edit individual item to keep the website up to date.
+    - Would like to delete specialty item that will no longer be available on the site.
+    
 ## Scope
+
+- Responsive interface.
+- Simple menu.
+- Simple search function.
+- Display search results.
+- Login and sign up page.
+- A user dashbroad.
+- Display club / personal trainer / product
+- Display shopping cart
+- Update / remove quantites for item in cart
+- Add / edit delivery information 
+- Add / edit / delete function of products
+- A way to contact owner.
+- Log out
 
 #### **Functional requirement for the platform.**
 
-    -  **Future functional for the platform.**
+- Sign up form with email address and password.
+- Be able to login
+- Be able to view profile page / dashboard.
+- Able to run search events by using keywords.
+- Display product.
+- Be able to add / edit / delete a products.
+- To be able to create/view/edit/delete shopping bag.
+- To be able to process order and payments.
+- To be able to store images of products added to collection.
+- Able to contact owner.
+- Page 404 Not Found.
+- Page 500 Internal Server Error page.
+
+#### **Functional requirement for the platform.**
+
+- To message personal trainer through your profile page.
+- To keep track of your personal trainer / massage session clips.
+- To be able to have your personal trainer load your workout program to your profile.
+- Admin management to update workout class schedule.
 
 ## Building Constraints
+
+- The owner is building the site for the first time and is still learning Python, Django. The lack of knowledge could hinder me from fulfilling the owners overall look and features on this platform.
+- Lack of time: to implement features due to learning new technical skills. Full time work and two kids (one being 8 months).
  
 ## Structure
 
-![structure-first-look]()
+- Header: Search function, logo and account icon and bag icon.
+- Navbar: navigational links with collapsible menu.
+- Homepage: Hero image, information about the company, sign up button and find a trainer.
+- Club page: Display clubs details and personal trainer working at each club.
+- Product page: Display item on the site.
+- Shopping bag: Display item that are/added to the bag.
+- Checkout page: Display item, the form to buy items.
+- Footer: Links to social media and Copyright.
+
+### Database structure
+
+Project using SQLite for deveploment and then Postgres when Hosted by Heroku.  This is first draft for the project.
+
+[structure-first-look]()
 
 # Design
 
@@ -82,7 +166,7 @@ As a personal trainer I wanted to build a fictional personal training website an
 
 I used mockup [mockflow.com](https://www.mockflow.com/) 
 
-![Homepage]()
+[Homepage]()
 - [Wireframes Download PDF]()
 - [Wireframes Download PDF]()
 - [Wireframes Download PDF]()
@@ -92,7 +176,14 @@ I used mockup [mockflow.com](https://www.mockflow.com/)
 
 ### Database Structure
 
-![Database-design]()
+A pdf version of the feature trade-off can been see [here](documentation/design/database-structure/db-database-excel.pdf)
+
+A pptx version of the feature trade-off can been see [here](documentation/design/database-structure/db-database.pptx)
+
+![Database-design-1](documentation/design/database-structure/db-database-1.png)
+![Database-design-2](documentation/design/database-structure/db-database-2.png)
+![Database-design-3](documentation/design/database-structure/db-database-3.png)
+
 
 ### Typography
 
@@ -104,96 +195,9 @@ I used mockup [mockflow.com](https://www.mockflow.com/)
 
 ### Image
 
-Home page Gym Photo
-Photo by <a href="https://unsplash.com/@sxoxm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sven Mieke</a> on <a href="https://unsplash.com/s/photos/gym?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Image details and information about the image can be found here in [this document](documentation/feature-images/image.md).
 
-online training two 
-Photo by <a href="https://unsplash.com/@krakenimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">krakenimages</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-online training one
-Photo by <a href="https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kari Shea</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-gym1
-Photo by <a href="https://unsplash.com/@dncerullo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Danielle Cerullo</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-https://unsplash.com/photos/CQfNt66ttZM
-
-gym2
-Photo by <a href="https://unsplash.com/@risennnnn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Risen Wang</a> on <a href="https://unsplash.com/s/photos/gym?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-https://unsplash.com/photos/20jX9b35r_M
-
-gym3
-Photo by <a href="https://unsplash.com/@good_citizen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Humphrey Muleba</a> on <a href="https://unsplash.com/s/photos/gym?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-https://unsplash.com/photos/LOA2mTj1vhc
-
-gym4
-Photo by <a href="https://unsplash.com/@samuelgirven?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Samuel Girven</a> on <a href="https://unsplash.com/s/photos/gym?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-https://unsplash.com/photos/fqMu99l8sqo
-
-  
-  massage
-  Photo by Ryutaro Tsukata from Pexels
-  https://www.pexels.com/photo/male-doctor-massaging-shoulders-of-patient-5473182/
-
-  food
-  Photo by Yaroslav Shuraev from Pexels
-  https://www.pexels.com/photo/person-holding-white-printer-paper-8844387/
-
-  headshot
-  Photo by <a href="https://unsplash.com/@julianwan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Julian Wan</a> on <a href="https://unsplash.com/s/photos/profile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/WNoLnJo7tS8
-
-  2
-  Photo by <a href="https://unsplash.com/@luisviol?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luis Villasmil</a> on <a href="https://unsplash.com/s/photos/profile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/hh3ViD0r0Rc
-
-  3
-  Photo by <a href="https://unsplash.com/@krivitskiy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander Krivitskiy</a> on <a href="https://unsplash.com/s/photos/profile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/KtS7Fu48LLw
-
-  4
-  Photo by <a href="https://unsplash.com/@luisviol?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luis Villasmil</a> on <a href="https://unsplash.com/s/photos/profile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/6qf1uljGpU4
-
-  5
-  https://unsplash.com/photos/6W4F62sN_yI
-  Photo by <a href="https://unsplash.com/@armedshutter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ayo Ogunseinde</a> on <a href="https://unsplash.com/s/photos/profile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
-
-  6
-  https://unsplash.com/photos/f5xiGmFwXIU
-  Photo by <a href="https://unsplash.com/@fresh_studio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Zoran Borojevic</a> on <a href="https://unsplash.com/s/photos/headshot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
-  7
-  Photo by <a href="https://unsplash.com/@julianmyleshoward?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Julian Myles</a> on <a href="https://unsplash.com/s/photos/headshot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/I2g6Oe9ElbE
-
-  8
-  Photo by <a href="https://unsplash.com/@karsten116?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Karsten Winegeart</a> on <a href="https://unsplash.com/s/photos/headshot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/Q7iB4Yixcfw
-  
-  9
-  Photo by <a href="https://unsplash.com/@visualartery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brian Lawson</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/4H2fivgnwRg
-
-  10
-  Photo by <a href="https://unsplash.com/@karsten116?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Karsten Winegeart</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/kWm6bXPJl4s
-
-  11
-  Photo by <a href="https://unsplash.com/@shootwithlou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luis Santoyo</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/IH1w8JkmEhU
-
-  12
-  Photo by <a href="https://unsplash.com/@ziphaus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ziphaus</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/Fkb4-bLAE4o
-
-  13
-  Photo by <a href="https://unsplash.com/@happypappy21?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Harry Pappas</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/xyauiSBWRFs
-
-  14
-  Photo by <a href="https://unsplash.com/@taylor_deas_melesh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Taylor Deas-Melesh</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  https://unsplash.com/photos/byRGjjO-Ync
 
 # Features
 
@@ -224,6 +228,11 @@ https://unsplash.com/photos/fqMu99l8sqo
 
 # Database
 
+- [db.sqlite3](https://www.sqlite.org/index.html)
+    - A SQLITE3 file is a database file stored in the SQLite 3 format. It contains structured data records, which contain data types and values. SQLITE3 files are often used for storing embedded SQL-based databases for iPhone apps and other mobile applications.
+- [Postgres](https://www.postgresql.org/)
+    - PostgreSQL also known as Postgres, is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance.
+
 # Technologies, Libraries and Frameworks Used
 
 - [Bootstrap 5:]()
@@ -241,14 +250,20 @@ https://unsplash.com/photos/fqMu99l8sqo
     - Local repository to read the develop code.
 - [Heroku](https://www.heroku.com/home)
     - Heroku is a cloud platform as a service supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007
-- [JShints](https://jshint.com) 
-    - a tool that helps to detect errors and potential.
--  
-- 
-- 
+- [Django](https://www.djangoproject.com/)
+    - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+- [Amazon Web Services (AWS)](https://aws.amazon.com)
+    - AWS (Amazon Web Services) is a comprehensive, evolving cloud computing platform provided by Amazon.
+- [Amazon Web Services S3](https://aws.amazon.com)
+    - Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance.
+- [Amazon Web Services IAM](https://aws.amazon.com)
+    - Identity and access management (IAM) is a framework of business processes, policies and technologies that facilitates the management of electronic or digital identities.
+- [Stripe](https://stripe.com/en-gb-se)
+    - Stripe is an online payment processing and credit card processing platform for businesses. When a customer buys a product online, the funds need to be delivered to the seller; Insert Stripe. Stripe allows safe and efficient processing of funds via credit card or bank and transfers those funds to the sellers account.
 - [mockflow.com](https://www.mockflow.com/) 
     - Used to design my wireframes.
-- 
+- [DB Diagram](https://dbdiagram.io/home)
+    - Database diagrams graphically show the structure of the database and relations between database objects. You can generate a diagram for a data source, a schema, or a table. To create relations between database objects, consider using primary and foreign keys
 - [W3C CSS Validator](https://validator.w3.org) 
     - Used to check of errors in HTML code.
 - [W3C HTML Checker](https://validator.w3.org)
@@ -276,7 +291,7 @@ https://unsplash.com/photos/fqMu99l8sqo
 
 # Testing
 
-- ## Testing process can be read [here]().
+- ## Testing process can be read [here](documentation/testing/testing.md).
 
 # Deployment
 
@@ -365,21 +380,12 @@ https://www.zestwellnessnutrition.com/purchase-new/60-min-virtual-11-coaching-se
 
 - My Wife: for her support and looking after the kids.
 - My Daughter and Son: For the understand that daddy has to study.
-- Previous Mentor: Oluwafemi Medale for helping through the first part of the course.
 - New Mentor: Felipe Souza Alarcon for his feedback and help.
 - Code Institue: for the knowledge you gave me.
 - W3School: For helpful reminders.
+- [Stackoverflow](https://stackoverflow.com)
+- Product image and information sourced from [MyProtein.com](https://www.myprotein.se/)
 
 ## Code
 
-#### Java Script
-
-#### Python code
-
-
-Issue
-
-dropdown menu
-bs need to be added, to get everything to work.
-
-uuid on product when coming to CRUD - some change back from UUID to normal database set id
+- Code Institute [Boutique-ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/933797d5e14d6c3f072df31adf0ca6f938d02218)

@@ -1,21 +1,35 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.conf import settings
+from django.contrib import messages
 
 # Create your views here.
 def contact(request):
-    if request.method == 'POST':
-        message_name = request.POST['name']
-        message_email = request.POST['email']
-        message_message = request.POST['message']
+    if request.method == "POST":
 
-        # send an email
+        message_name = request.POST.get('name')
+        message_subject = request.POST.get('subject')
+        message_email = request.POST.get('email')
+        message_message = request.POST.get('message')
 
-        
-
-        context = {
+        data = {
             'name': message_name,
+            'subject': message_subject,
+            'email': message_email,
+            'message': message_message
         }
 
-        return render(request, 'contact/contact.html', context)
+        message = """
+        From: {}
+        New message: {}
+        Email: {}
+        """.format(data['name'], data['message'], data['email'])
+        # send an email
+        send_mail(data['subject'], message, '', ['mpt.craig@gmail.com'])
+        messages.success(request, f'Your email was send Successfully!')
+        
+
+        return render(request, 'contact/contact.html', {})
     else:
         return render(request, 'contact/contact.html', {})
