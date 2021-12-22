@@ -188,23 +188,45 @@
             </div>
         </div>
         <div class="row review-page-body container">
+            
             <div class="col-md-6 col-12">
+                {% for review in product.reviews.all %}
                 <div class="review-info">
-                    <span class="text-black review-user-i">Admin</span>
-                    <span class="text-black review-user-date">21 Dec 2021 / 22:23 <span>
-                    <span class="text-black review-user-rating">4</span>
+                    <span class="text-black review-user-i">by {{ review.user}}</span>
+                    <span class="text-black review-user-date"> {{ review.created_on|date:"d-m-Y"}} <span>
+                    <span class="text-black review-user-rating">{{ review.review_rating }}</span>
                 </div>
                 <div class="review-comment mt-1">
-                    <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae doloribus 
-                        ut maxime, nisi consectetur, ipsum est impedit recusandae ab, ullam minus!</p>
+                    <p class="text-black">{{ review.comment }}</p>
                 </div>
+                <div class="review-delete-comment">
+                    {% if request.user.is_superuser %}
+                    <a class=" text-danger text-decoration-none" href="{% url 'delete_review' review.id %}">Click to delete
+                        Review</a>
+                    {% endif %}
+                </div>
+                {% endfor%}
             </div>
             <div class="col-md-6 col-12 text-center">
                 <div class="review-form-heading">
                     <h5 class="text-uppercase text-black">Write Your Review!</h5>
                 </div>
                 <div class="review-form-body">
-                    
+                    {% if request.user.is_authenticated %}
+                    <form method="POST" action="{% url 'add_review' product.id %}#reviews">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="text-center mt-3">
+                            <button class="btn bb1 rounded-0 text-uppercase" type="submit">Submit Review</button>
+                        </div>
+                    </form>
+                    {% else %}
+                    <p class="review-text text-center mt-4">
+                        To Leave a Review!
+                        <a class="user-login" href="{% url 'account_signup' %}">Register</a> or <a
+                            class="user-login" href="{% url 'account_login' %}">Log In</a> 
+                    </p>
+                    {% endif %}
                 </div>
                 
                 <hr>

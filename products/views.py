@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category, Tag
+from .models import Product, Category, Tag, ProductReview
+from .forms import ProductReviewForm  
 
 from django.db.models.functions import Lower
 from .forms import ProductForm
@@ -61,7 +62,7 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
     return render(request, 'products/products.html', context)
-
+    
 
 def product_detail(request, product_id):
     """
@@ -69,9 +70,11 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ProductReviewForm()
 
     context = {
         'product': product,
+        'form': form,
     }
     return render(request, 'products/product_detail.html', context)
 
@@ -146,3 +149,44 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_review(request, product_id):
+    """ Allow users to add  a product review """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = ProductReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.product = product
+                review.user = request.user
+                review.save()
+                messages.success(request, 'Your review \
+                    has been successfully added!')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, 'Something went wrong! \
+                    Please try to add your review again.')
+    context = {
+        'form': form
+    }
+    return render(request, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete review """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry,just store owner can do that.')
+        return redirect(reverse('home'))
+    elif request.user.is_superuser:
+        review = ProductReview.objects.filter(pk=review_id).last()
+        product_id = review.product_id
+        review.delete()
+        messages.success(request, f"{ review.user }'s review has been \
+        removed!", extra_tags=' ')
+        return redirect(reverse('product_detail', args=[product_id]))

@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -47,3 +49,19 @@ class Tag(models.Model):
     
     def __str__(self):
         return self.name
+
+
+class ProductReview(models.Model):
+    """
+    Product Review Model
+    """
+    product = models.ForeignKey(Product, related_name='reviews', null=True,
+                                blank=True, on_delete=models.SET_NULL)
+    user = models.ForeignKey(User, null=True, blank=True,
+                             on_delete=models.CASCADE)
+    comment = models.TextField()
+    review_rating = models.IntegerField(default=0)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.id)
