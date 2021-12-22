@@ -70,6 +70,7 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    # for the product review rating post
     form = ProductReviewForm()
 
     context = {
@@ -192,8 +193,9 @@ def delete_review(request, review_id):
         return redirect(reverse('home'))
     elif request.user.is_superuser:
         review = ProductReview.objects.filter(pk=review_id).last()
+        # need the product id 
         product_id = review.product_id
         review.delete()
-        messages.success(request, f"{ review.user }'s review has been \
-        removed!", extra_tags=' ')
+        messages.success(request, f"{ review.user }'s review '{ review.comment }' has been \
+        removed!")
         return redirect(reverse('product_detail', args=[product_id]))
