@@ -2,10 +2,10 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category, Tag, ProductReview
-from .forms import ProductReviewForm  
-
 from django.db.models.functions import Lower
+from .models import Product, Category, Tag, ProductReview
+from .forms import ProductReviewForm
+
 from .forms import ProductForm
 
 
@@ -62,7 +62,7 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
     return render(request, 'products/products.html', context)
-    
+
 
 def product_detail(request, product_id):
     """
@@ -77,6 +77,7 @@ def product_detail(request, product_id):
         'form': form,
     }
     return render(request, 'products/product_detail.html', context)
+
 
 @login_required
 def add_product(request):
@@ -94,16 +95,18 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Faild to add product. Please ensure the form is valid.')
-    else:       
+            messages.error(request, 'Faild to add product. \
+                 Please ensure the form is valid.')
+    else:
         form = ProductForm()
 
-    template =  'products/add_product.html'
+    template = 'products/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -123,18 +126,20 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is vaild.')
+            messages.error(request, 'Failed to update product. \
+                Please ensure the form is vaild.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
-    template =  'products/edit_product.html'
+    template = 'products/edit_product.html'
     context = {
         'form': form,
         'product': product,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):
@@ -156,6 +161,8 @@ def add_review(request, product_id):
     """ Allow users to add  a product review """
 
     product = get_object_or_404(Product, pk=product_id)
+
+    # https://stackoverflow.com/questions/56982579/how-to-display-all-the-reviews-for-the-particular-product
 
     if request.user.is_authenticated:
         if request.method == 'POST':
@@ -181,7 +188,7 @@ def add_review(request, product_id):
 def delete_review(request, review_id):
     """ Delete review """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry,just store owner can do that.')
+        messages.error(request, 'Sorry,just site managment can do that.')
         return redirect(reverse('home'))
     elif request.user.is_superuser:
         review = ProductReview.objects.filter(pk=review_id).last()
