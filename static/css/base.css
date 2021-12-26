@@ -9,7 +9,6 @@ html {
 }
 
 
-
 .full-screen {
     background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
     background-size: cover;
@@ -73,6 +72,7 @@ p {
 	z-index: -2;
 }
 
+
 /* Return from shopping bag to url page */
 .btn-black {
     background: black;
@@ -132,6 +132,7 @@ input[name='q']::placeholder {
 
 /* Convenience classes - colors copied from Bootstrap 
     -- CI code from boutique ado-- */
+
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -250,7 +251,6 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
-
 
 /* Media Queries */
 

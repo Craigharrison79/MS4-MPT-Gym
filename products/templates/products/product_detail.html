@@ -180,8 +180,9 @@
             </div>
         </div>
     </section>
+    <!-- Product Review section -->
     <section class="reveiw">
-        <div class="row review-page-heading container">
+        <div class="row review-page-heading container-fluid">
             <div class="col-12">
                 <h4 class="text-uppercase text-black">Reviews</h4>
                 <hr>
@@ -189,22 +190,24 @@
         </div>
         <div class="row review-page-body container">
             
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 col-12 added-review-container">
                 {% for review in product.reviews.all %}
-                <div class="review-info">
-                    <span class="text-black review-user-i">by {{ review.user}}</span>
-                    <span class="text-black review-user-date"> {{ review.created_on|date:"d-m-Y"}} <span>
-                    <span class="text-black review-user-rating">{{ review.review_rating }}</span>
+                <div class="review-info mt-3">
+                    <span class="text-black review-user-i">BY {{ review.user}}</span>
+                    <span class="text-black review-user-date">ON THE: {{ review.created_on|date:"d-m-Y"}} <span>
+                    <br>
+                    <p class="text-black">Rating on this product: <span class="text-black review-user-rating">{{ review.review_rating }} stars</span></p>
                 </div>
                 <div class="review-comment mt-1">
                     <p class="text-black">{{ review.comment }}</p>
                 </div>
                 <div class="review-delete-comment">
                     {% if request.user.is_superuser %}
-                    <a class=" text-danger text-decoration-none" href="{% url 'delete_review' review.id %}">Click to delete
+                    <a class=" text-danger text-decoration-none" href="{% url 'delete_review' review.id %}"><i class="fas fa-trash-alt"></i> Click to delete
                         Review</a>
                     {% endif %}
                 </div>
+                <hr>
                 {% endfor%}
             </div>
             <div class="col-md-6 col-12 text-center">
@@ -213,7 +216,7 @@
                 </div>
                 <div class="review-form-body">
                     {% if request.user.is_authenticated %}
-                    <form method="POST" action="{% url 'add_review' product.id %}#reviews">
+                    <form method="POST" action="{% url 'add_review' product.id %}">
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center mt-3">
@@ -221,7 +224,7 @@
                         </div>
                     </form>
                     {% else %}
-                    <p class="review-text text-center mt-4">
+                    <p class="text-black review-text text-center mt-4">
                         To Leave a Review!
                         <a class="user-login" href="{% url 'account_signup' %}">Register</a> or <a
                             class="user-login" href="{% url 'account_login' %}">Log In</a> 
@@ -229,7 +232,7 @@
                     {% endif %}
                 </div>
                 
-                <hr>
+                
             </div>
         </div>
         

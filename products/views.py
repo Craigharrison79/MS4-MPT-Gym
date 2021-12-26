@@ -192,6 +192,7 @@ def delete_review(request, review_id):
         messages.error(request, 'Sorry,just site managment can do that.')
         return redirect(reverse('home'))
     elif request.user.is_superuser:
+        # https://stackoverflow.com/questions/70024172/how-to-delete-model-by-filtering-with-pk
         review = ProductReview.objects.filter(pk=review_id).last()
         # need the product id 
         product_id = review.product_id

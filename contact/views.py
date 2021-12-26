@@ -28,7 +28,7 @@ def contact(request):
         # send an email
         send_mail(data['subject'], message, '', ['mpt.craig@gmail.com'])
         messages.success(request, f'Your email was send Successfully!')
-        
+
 
         return render(request, 'contact/contact.html', {})
     else:
