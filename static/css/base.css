@@ -245,6 +245,12 @@ input[name='q']::placeholder {
     color: orange;
 }
 
+/*-- Profile page --*/
+
+.page-height {
+    height: 100vh;
+}
+
 
 
 
@@ -346,3 +352,22 @@ input[name='q']::placeholder {
     }
 }
 */
+
+
+/* Media Queries */
+
+
+@media (max-width: 402px) {
+    /* push body down to the bottom of main page header */
+    .mobile-small-screen {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 356px) {
+    /* push body down to the bottom of main page header */
+    .small-screen-wrap {
+        flex-wrap: unset;
+    }
+}
+
