@@ -166,12 +166,18 @@ Project using SQLite for deveploment and then Postgres when Hosted by Heroku.  T
 
 I used mockup [mockflow.com](https://www.mockflow.com/) 
 
-[Homepage]()
-- [Wireframes Download PDF]()
-- [Wireframes Download PDF]()
-- [Wireframes Download PDF]()
-- [Wireframes Download PDF]()
-- [Wireframes Download PDF]()
+![Homepage](documentation/design/wireframes/home-page.jpg)
+![Clubpage](documentation/design/wireframes/club-page.jpg)
+![Clubpage](documentation/design/wireframes/club-detail-page.jpg)
+![Productpage](documentation/design/wireframes/product-page.jpg)
+![Productpage2](documentation/design/wireframes/product-detail-page.jpg)
+
+
+- [Wireframes Download PDF](documentation/design/wireframes/home-page.pdf)
+- [Wireframes Download PDF](documentation/design/wireframes/club-page.pdf)
+- [Wireframes Download PDF](documentation/design/wireframes/club-detail-page.pdf)
+- [Wireframes Download PDF](documentation/design/wireframes/product-page.pdf)
+- [Wireframes Download PDF](documentation/design/wireframes/product-detail-page.pdf)
 - [Wireframes Download PDF]()
 
 ### Database Structure
@@ -191,7 +197,7 @@ A pptx version of the feature trade-off can been see [here](documentation/design
 
 ### Color Scheme
 
-![Colour Scheme](documentation/design/colours.png)
+![Colour Scheme](documentation/design/design-structure/colours.png)
 
 ### Image
 
