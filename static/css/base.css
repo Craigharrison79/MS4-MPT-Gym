@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
 html {
     height: 100%;
 }
@@ -13,6 +15,18 @@ html {
     background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
     background-size: cover;
     height: 100% !important;
+}
+
+.logo {
+    font-size: 60px;
+    color: orange;
+    font-family: 'Bungee Outline', cursive;
+}
+
+.logo-2 {
+    font-size: 30px;
+    color: white;
+    font-family: 'Bungee Outline', cursive;
 }
 
 p {
@@ -90,6 +104,8 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+
+
 /* --CI code from boutique ado -- bootstrap toasts --*/
 
 .message-container {
@@ -125,10 +141,9 @@ input[name='q']::placeholder {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
     color: white;
     text-align: center;
-
+}
 
 /* Convenience classes - colors copied from Bootstrap 
     -- CI code from boutique ado-- */
@@ -171,7 +186,76 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* To remove the underline link on the paragraphs */
+.my-account-icon {
+    text-decoration: none;
+}
+
+.social a {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+}
+
+/*-- home page edit --*/
+
+.margin-pt-block {
+    margin-top: 150px !important;
+}
+
+/*-- Club main page --*/
+
+.border-orange {
+    border-color: orange !important;
+}
+
+.btn-outline-orange {
+    color: #fff;
+    background-color: #0d2134;
+    border-color: orange;
+}
+
+
+
+/*-- Club detail page --*/
+
+.text-orange {
+    color: orange;
+    font-size: 30px;
+}
+
+.opening-times {
+    color: #fff;
+    background-color: #0d2134;
+    border-color: orange;
+}
+
+.fa-laptop-code {
+    font-size: 50px;
+    color: orange;
+}
+
+/*
+.accordion-button.collapsed {
+    background: rgb(255, 0, 234)
+}
+*/
+
+.btn-close {
+    color: orange;
+}
+
+
+
+
 /*-- Allauth form formatting --*/
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -254,9 +338,11 @@ input[name='q']::placeholder {
 
 /* Media Queries */
 
+/*
 @media (min-width: 992px) {
-    /* push body down to the bottom of main page header */
+    /* push body down to the bottom of main page header 
     .header-container {
         padding-top: 144px;
     }
 }
+*/

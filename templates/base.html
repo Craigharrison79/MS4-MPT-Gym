@@ -44,7 +44,7 @@
     <header class="container-fluid base-color">
       <div class="row pt-lg-3 d-none d-lg-flex">
         <!-- Search Bar-->
-        <div class="col-12 col-lg-4 text-center">
+        <div class="col-12 col-lg-4 text-center mt-4">
           <form method="" action="{% url 'products' %}" class="d-flex">
             <input class="form-control me-2" type="search" name="q" placeholder="Search for Products" aria-label="Search">
             <button class="btn btn-outline-light" type="submit">Search</button>
@@ -52,7 +52,7 @@
         </div>
         <!-- Logo -->
         <div class="col-12 col-lg-4 text-center">
-          <a class="navbar-brand nav-link" href="{% url 'home' %}"><strong>MPT GYM</strong></a>
+          <a class="navbar-brand nav-link logo" href="{% url 'home' %}"><strong>MPT GYM</strong></a>
         </div>
         <!-- Account -->
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -100,7 +100,7 @@
       </div>
       <div class="row">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             {% include 'includes/mobile-top-header.html' %}
@@ -140,21 +140,21 @@
     <footer class="text-white text-center footer-style box-background">
       <div class="row mt-2">
         <div class="footer-heading pt-4">
-          <h4>MPT Gym</h4>
+          <h4 class="logo-2">MPT Gym</h4>
         </div>
-        <div class="social my-2">
+        <div class="social footer-body my-2">
           <span>
             <a href="http://www.facebook.com" target="_blank" rel="noopener">
-              <i class="fab fa-facebook  text-color"></i>
+              <i class="fab fa-facebook text-color"></i>
             </a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener">
-              <i class="fab fa-instagram  text-color"></i>
+              <i class="fab fa-instagram text-color"></i>
             </a>
             <a href="http://www.twitter.com" target="_blank" rel="noopener">
-              <i class="fab fa-twitter  text-color"></i>
+              <i class="fab fa-twitter text-color"></i>
             </a>
             <a href="http://www.youtube.com" target="_blank" rel="noopener">
-              <i class="fab fa-youtube  text-color"></i>
+              <i class="fab fa-youtube text-color"></i>
             </a>
           </span>
         </div>
