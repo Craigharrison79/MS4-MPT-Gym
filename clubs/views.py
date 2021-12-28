@@ -23,7 +23,7 @@ def club_detail(request, club_id):
 
     club = get_object_or_404(Club, pk=club_id)
     pts = Personal_Trainer.objects.all()
-    
+
     context = {
         'club': club,
         'pts': pts,

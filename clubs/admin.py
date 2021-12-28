@@ -11,6 +11,7 @@ class ClubAdmin(admin.ModelAdmin):
         'id',
     )
 
+
 class PersonalTrainerAdmin(admin.ModelAdmin):
     list_display = (
         'club',

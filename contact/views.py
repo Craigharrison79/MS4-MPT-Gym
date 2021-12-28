@@ -1,8 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
+
 
 # Create your views here.
 def contact(request):
@@ -28,7 +28,6 @@ def contact(request):
         # send an email
         send_mail(data['subject'], message, '', ['mpt.craig@gmail.com'])
         messages.success(request, f'Your email was send Successfully!')
-
 
         return render(request, 'contact/contact.html', {})
     else:

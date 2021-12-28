@@ -1,5 +1,4 @@
 from django.db import models
-import uuid
 
 
 # Create your models here.
@@ -9,10 +8,11 @@ class City_or_Town(models.Model):
     def __str__(self):
         return self.city_or_town
 
+
 class Club(models.Model):
     club = models.CharField(max_length=200)
     city_or_town = models.ForeignKey('City_or_Town', null=True, blank=True,
-                                 on_delete=models.SET_NULL)
+                                     on_delete=models.SET_NULL)
     phone_number = models.CharField(max_length=14, null=False, blank=False)
     email = models.EmailField(max_length=255, null=False, blank=False)
     postcode = models.CharField(max_length=20,  null=False, blank=False)
@@ -26,7 +26,7 @@ class Club(models.Model):
 class Personal_Trainer(models.Model):
     full_name = models.CharField(max_length=200)
     club = models.ForeignKey('Club', null=True, blank=True,
-                                 on_delete=models.SET_NULL)
+                             on_delete=models.SET_NULL)
     speciality1 = models.CharField(max_length=100, null=True, blank=True)
     speciality2 = models.CharField(max_length=100, null=True, blank=True)
     phone_number = models.CharField(max_length=20, null=True, blank=True)

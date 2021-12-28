@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Tag, ProductReview
+from .models import Product, Category, ProductReview
 from .forms import ProductReviewForm
 
 from .forms import ProductForm
@@ -194,7 +194,7 @@ def delete_review(request, review_id):
     elif request.user.is_superuser:
         # https://stackoverflow.com/questions/70024172/how-to-delete-model-by-filtering-with-pk
         review = ProductReview.objects.filter(pk=review_id).last()
-        # need the product id 
+        # need the product id
         product_id = review.product_id
         review.delete()
         messages.success(request, f"{ review.user }'s review '{ review.comment }' has been \
