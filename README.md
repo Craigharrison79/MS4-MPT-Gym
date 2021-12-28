@@ -305,7 +305,10 @@ Repository is hosted on Github and deployed on Heroku. I developed the website u
 
 ### Other platforms used
 
-- An account with Heroku.
+- An account with [Heroku](https://www.heroku.com/home)
+    - Heroku is a cloud platform as a service supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com)
+    - AWS (Amazon Web Services) is a comprehensive, evolving cloud computing platform provided by Amazon.
 
 ## Cloning the Project
 
@@ -320,7 +323,7 @@ Create a repository in GitHub. Unzip the folder Upload the files into your works
 More information on cloning repository:
 [Github Information](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-![github1](documentation/deployment/GitHub-2.png)
+![github1](documentation/testing/files/deployment/code-zip.png)
 
 ## Forking the Project
 
@@ -329,49 +332,91 @@ When you finish logging into Github, navigate to the repository page, and select
 More information on fork repository:
 [Github Information](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
 
-![github2](documentation/deployment/GitHub-1.png)
+![github2](documentation/testing/files/deployment/code-fork.png)
 
 ## Set up the local environment
 
-## Procfile and Requirements.txt
+One you open up the project in Gitpod you need to install the requirements for the project to do this in the terminal `pip3 install r requirements.txt`
 
-- We need to make a list of all the Python dependencies for the project which can be done in the command line by creating a file "requirements.txt.
+![install](documentation/testing/files/deployment/requirements-txt.png)
 
-``$ pip freeze > requirements.txt`` 
+Check or enter in any environment variables you will need in your settings in Gitpod
 
-- When we deploy to Heroku we need a specific file that lets Heroku know how to run the project and this is done in the command line also by creating a Profile.
+![install2](documentation/testing/files/deployment/Gitpod-settings.png)
+![install3](documentation/testing/files/deployment/Gitpod-vars.png)
 
+- Then you need to migrate the project `python3 manage.py makemigrations` and then `python3 manage.py migrate`
 
-``$ echo web: python app.py > Procfile`` (use capital P when writing Procfile).
+- Once this is done you can start loading the json files. `python3 manage.py loaddata <name of file>`
 
-- Also make sure you remove any added lines to the Procfile code as this can cause problems in Heroku running the project.
+- Best way to upload the json files is (could end up with issue if you upload in a different order): 
 
-- How push to GitHub.
+    ### Clubs fixtures
+    - city_or_town.json,
+    - clubs.json,
+    - personal_trainer.json
+
+    ### Then Product fixtures
+    - categories.json
+    - tags.json
+    - products.json
+
+Let's create a superuser `python manage.py createsuperuser`
+
+Username: admin. You will then be prompted for your desired email address:
+Email address: admin@example.com. ...
+Password: ********** Password (again): ********* You You should see Superuser created successfully if everything is working.
+
 
 ## Deployment on Heroku
 
 Log onto Heroku and to create an app by clicking on the new app button.
 
-![heroku1]()
+![heroku1](documentation/testing/files/deployment/heroku-new-app.png)
 
 - You need to a unique name for your application.
  
 - Now select the region that is closest to you.
 
-- Set your deployment method to 'GitHub'.
+- You need to set up a database so click on resource tab and enter in [Postgres](https://www.postgresql.org/) into the add-ons input box.  Then click on Heroku Postgres.
 
-![heroku2]()
+![postgres](documentation/testing/files/deployment/postgres-setup.png)
 
-- Find the repository that you are going to deploy.
+Select the free Hobby Dev plan.
 
-- Enable automatic deploy.
+- In Gitpod you need to login to heroku: 
+    - heroku login -i
+    - enter your email
+    - password
 
-![heroku3]()
+Next we need to temporarily disable collectstatic file by type:  
+    `heroku config:set DISABLE_COLLECTSTATIC=1  --app <app-name>` 
 
-- To Set environment in Heroku App
+In Django setting add allowed host to gain access to heroku
 
-    - Go to settings, In the config vars click show config vars.
-    - Enter your key value pairs as per your env.py file.
+![Allowed-host](documentation/testing/files/deployment/allowed-host.png)
+
+Now Git add/commit and push your settings to Github and then using: `git push heroku master` to deploy to Heroku.  Maybe you need to do this remotely with `heroku git:remote -a <app name>` then try and push to heroku again wtih `git push heroku master`.
+
+Let's setup it to automatically deploy to Heroku when we push to Github.
+
+- In Heroku click Deploy tab and then click on connect to Github in the Deployment method selection.
+
+![heroku3](documentation/testing/files/deployment/deployment-method.png)
+
+- Now find your repository and then click connect.
+
+![heroku4](documentation/testing/files/deployment/connect-github.png)
+
+When that is done we will enable automatic deployment by click on the button.
+
+![heroku5](documentation/testing/files/deployment/automatic-deploys.png)
+
+Now enter is your all the Config Vars you need into Heroku settings.  Click on the settings tabs and navigate to the Config Vars and enter all the environment variables you will need.
+
+![config-var](documentation/testing/files/deployment/heroku-config.png)
+![config-var](documentation/testing/files/deployment/config-vars.png)
+
 
 # Credits
 
