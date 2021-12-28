@@ -11,7 +11,7 @@
                 back to you as soon as
                 possible!</p>
 
-                    
+
         </div>
     </div>
 </section>
@@ -21,9 +21,9 @@
             <div class="row contact_us">
                 <div class="col-12 my-3">
                     {% if message_name %}
-                        <h4 class="text-white">Thanks {{ name }}!</h4>
-                        <p><strong>We received your message and aim to respond within the next 1-2 working days</strong></p>
-                        <p>Kind regards MPT Recipe Team</p>  
+                    <h4 class="text-white">Thanks {{ name }}!</h4>
+                    <p><strong>We received your message and aim to respond within the next 1-2 working days</strong></p>
+                    <p>Kind regards MPT Recipe Team</p>
                     {% else %}
                     <!-- Form -->
                     <form method="POST" action="{% url 'contact' %}">
@@ -55,7 +55,8 @@
                         <br>
                         <!-- Submit Button -->
                         <div class="text-center mb-3 d-grid gap-2 col-6 mx-auto">
-                            <button type="submit" class="btn text-white btn-outline-secondary btn-dark btn-lg" id="sendMessageButton">Send</button>
+                            <button type="submit" class="btn text-white btn-outline-secondary btn-dark btn-lg"
+                                id="sendMessageButton">Send</button>
                         </div>
                     </form>
                     {% endif %}
@@ -65,5 +66,5 @@
     </div>
 </section>
 
-    
+
 {% endblock %}

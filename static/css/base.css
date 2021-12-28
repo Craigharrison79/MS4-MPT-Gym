@@ -18,19 +18,42 @@ html {
     height: 100% !important;
 }
 
+/* Color background  section for the site */
+.base-color {
+    background-color: #0d2134 !important;
+}
+
+#main-nav {
+    background-color: #0d2134 !important;
+    z-index: 0;
+}
+
+.box-background {
+    background-color: #0d2134 !important;
+}
+
+/* Logo section */
+
 .logo {
     font-size: 60px;
     color: #ffa500;
     font-family: 'Bungee Outline', cursive;
 }
 
-.logo-2 {
-    font-size: 30px;
-    color: white;
-    font-family: 'Bungee Outline', cursive;
+p { 
+    color: white !important;
 }
 
-p {
+.text-color {
+    color: white !important;
+}
+
+/* Navbar section */
+.navbar-unhide-fix {
+    margin-top: 140px;
+}
+
+.narbar-light .navbar-nav .nav-link {
     color: white !important;
 }
 
@@ -41,39 +64,8 @@ p {
     margin-top: 10px;
 }
 
-.navbar-unhide-fix {
-    margin-top: 140px;
-}
-
-.base-color {
-    background-color: #0d2134 !important;
-}
-
 .photo-size{
     height: 500px;
-}
-  
-#main-nav {
-    background-color: #0d2134 !important;
-    z-index: 0;
-}
-
-.box-background {
-    background-color: #0d2134 !important;
-}
-
-/*.shadow-box {
-    background-color: black !important;
-    opacity: 50%;
-    height: 100vh;
-}*/
-
-.text-color {
-    color: white !important;
-}
-
-.narbar-light .navbar-nav .nav-link {
-    color: white !important;
 }
 
 /* CI code from boutique ado */
@@ -87,6 +79,57 @@ p {
 	z-index: -2;
 }
 
+/*-- home page edit --*/
+
+.margin-pt-block {
+    margin-top: 150px !important;
+}
+
+/*-- Club main page --*/
+
+.border-orange {
+    border-color: orange !important;
+}
+
+.btn-outline-orange {
+    color: #fff;
+    background-color: #0d2134;
+    border-color: orange;
+}
+
+/*-- Club detail page --*/
+
+.text-orange {
+    color: orange;
+    font-size: 30px;
+}
+
+.opening-times {
+    color: #fff;
+    background-color: #0d2134;
+    border-color: orange;
+}
+
+.fa-laptop-code {
+    font-size: 50px;
+    color: orange;
+}
+
+/* Footer section */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.logo-2 {
+    font-size: 30px;
+    color: white;
+    font-family: 'Bungee Outline', cursive;
+}
 
 /* Return from shopping bag to url page */
 .btn-black {
@@ -106,9 +149,8 @@ input[name='q']::placeholder {
 }
 
 
-
+/* Flash message section */
 /* --CI code from boutique ado -- bootstrap toasts --*/
-
 .message-container {
     position: fixed;
     top: 164px;
@@ -135,15 +177,6 @@ input[name='q']::placeholder {
     position: absolute;
     top: -10px;
     right: 36px;
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
 }
 
 /* Convenience classes - colors copied from Bootstrap 
@@ -198,50 +231,6 @@ input[name='q']::placeholder {
     padding: 10px;
 }
 
-/*-- home page edit --*/
-
-.margin-pt-block {
-    margin-top: 150px !important;
-}
-
-/*-- Club main page --*/
-
-.border-orange {
-    border-color: orange !important;
-}
-
-.btn-outline-orange {
-    color: #fff;
-    background-color: #0d2134;
-    border-color: orange;
-}
-
-
-
-/*-- Club detail page --*/
-
-.text-orange {
-    color: orange;
-    font-size: 30px;
-}
-
-.opening-times {
-    color: #fff;
-    background-color: #0d2134;
-    border-color: orange;
-}
-
-.fa-laptop-code {
-    font-size: 50px;
-    color: orange;
-}
-
-/*
-.accordion-button.collapsed {
-    background: rgb(255, 0, 234)
-}
-*/
-
 .btn-close {
     color: orange;
 }
@@ -251,9 +240,6 @@ input[name='q']::placeholder {
 .page-height {
     height: 100vh;
 }
-
-
-
 
 /*-- Allauth form formatting --*/
 
@@ -344,20 +330,6 @@ input[name='q']::placeholder {
 }
 
 /* Media Queries */
-
-/*
-@media (min-width: 992px) {
-    /* push body down to the bottom of main page header 
-    .header-container {
-        padding-top: 144px;
-    }
-}
-*/
-
-
-/* Media Queries */
-
-
 @media (max-width: 402px) {
     /* push body down to the bottom of main page header */
     .mobile-small-screen {

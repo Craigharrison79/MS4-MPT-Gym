@@ -2,93 +2,89 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
 
-            </div>
         </div>
     </div>
+</div>
 {% endblock page_header %}
 
 {% block content %}
-    <section class="container-fluid container-landing-page mt-1">
-        <div class="row photo-size">
-            <div class="col-12 col-lg-8 col-md-8 hero-block">
+<section class="container-fluid container-landing-page mt-1">
+    <div class="row photo-size">
+        <div class="col-12 col-lg-8 col-md-8 hero-block">
 
-            </div>
-                <div class="col col-lg-4x box-background text-center text-color pt-5 d-none d-md-block">
-                    <div class="my-5 pt-3">
-                        <h3 class="text-uppercase">Who are we?</h3> 
-                    </div>
-                    <div>
-                        <p>Welcome to leading training company in Sweden! With us, 
-                            you find experienced personal trainer and inspiring employees to help you 
-                            reach your training goals.</p>
-                    </div>
-                    <div class="col my-5">
-                        <h4>
-                            <a href="{% url 'clubs' %}" class="text-uppercase py-3 btn btn-light">Check out the Clubs</a>
-                            
-                        </h4>
-                    </div>
-                </div>
         </div>
-    </section>
-    <section class="container-fluid base-color">
-        <div class="row text-center text-color my-1 base-color">
-            <div class="col mt-5 base-color">
-                <h3 class="text-uppercase">Make your best investment ever!</h3> 
-            </div>
-                <div class="mb-5 base-color">
-                    <p>With us, you get a strong mind and body and feel better than you 
-                        have in years - find the enjoyment in training. Become member today and get started with us!
-                    </p>
-                    <h4>
-                        <a href="{% url 'account_signup' %}" class="text-uppercase py-3 btn btn-light btn-color-border">Sign Up Now</a>
-                    </h4>
-                </div>  
-        </div>
-    </section>
-    <section class="col-12 d-block d-sm-none text-center">
-        <div class="hero-block my-1">
-            <div class="pt-4 ">
-                <h3 class="text-uppercase text-white">Who are we?</h3> 
+        <div class="col col-lg-4x box-background text-center text-color pt-5 d-none d-md-block">
+            <div class="my-5 pt-3">
+                <h3 class="text-uppercase">Who are we?</h3>
             </div>
             <div>
-                <p class="px-4">Welcome to leading training company in Sweden! With us, 
-                    you find experienced personal trainer and inspiring employees to help you 
+                <p>Welcome to leading training company in Sweden! With us,
+                    you find experienced personal trainer and inspiring employees to help you
                     reach your training goals.</p>
             </div>
-            <div class="col my-1">
+            <div class="col my-5">
                 <h4>
-                    <a href="{% url 'clubs' %}" class="text-uppercase pb-2 mb-4 btn btn-light">Check out the Clubs</a>
-                    
+                    <a href="{% url 'clubs' %}" class="text-uppercase py-3 btn btn-light">Check out the Clubs</a>
+
                 </h4>
             </div>
         </div>
-
-    </section>
-    <section class="container-fluid">
-        <div class="row photo-size">
-            <div class="col col-lg-4 box-background text-center text-color">
-                <div class="margin-pt-block">
-                    <h3 class="text-center text-uppercase text-color pt-2 mt-2">Personal Trainer</h3>
-                </div>
-                <div>
-                    <p class="text-color">With the help of a personal trainer and goal-oriednted training,
-                        anything is possible.
-                    </p>
-                </div>
-                <div class="col my-5">
-                    <h4>
-                        <a href="{% url 'products' %}?category=Personal Training"
-                            class="text-uppercase py-2 btn btn-light">Buy Personal Training</a>
-                    </h4>
-                </div>
-            </div>
-            <div class="col col-lg-8 col-md-8 hero-block d-none d-md-block"> </div>
+    </div>
+</section>
+<section class="container-fluid base-color">
+    <div class="row text-center text-color my-1 base-color">
+        <div class="col mt-5 base-color">
+            <h3 class="text-uppercase">Make your best investment ever!</h3>
         </div>
-    </section>
-    
+        <div class="mb-5 base-color">
+            <p>With us, you get a strong mind and body and feel better than you
+                have in years - find the enjoyment in training. Become member today and get started with us!
+            </p>
+        </div>
+    </div>
+</section>
+<section class="col-12 d-block d-sm-none text-center">
+    <div class="hero-block my-1">
+        <div class="pt-4 ">
+            <h3 class="text-uppercase text-white">Who are we?</h3>
+        </div>
+        <div>
+            <p class="px-4">Welcome to leading training company in Sweden! With us,
+                you find experienced personal trainer and inspiring employees to help you
+                reach your training goals.</p>
+        </div>
+        <div class="col my-1">
+            <h4>
+                <a href="{% url 'clubs' %}" class="text-uppercase pb-2 mb-4 btn btn-light">Check out the Clubs</a>
+
+            </h4>
+        </div>
+    </div>
+
+</section>
+<section class="container-fluid">
+    <div class="row photo-size">
+        <div class="col col-lg-4 box-background text-center text-color">
+            <div class="margin-pt-block">
+                <h3 class="text-center text-uppercase text-color pt-2 mt-2">Personal Trainer</h3>
+            </div>
+            <div>
+                <p class="text-color">With the help of a personal trainer and goal-oriednted training,
+                    anything is possible.
+                </p>
+            </div>
+            <div class="col my-5">
+                <h4>
+                    <a href="{% url 'products' %}" class="text-uppercase py-2 btn btn-light">Buy Personal Training</a>
+                </h4>
+            </div>
+        </div>
+        <div class="col col-lg-8 col-md-8 hero-block d-none d-md-block"> </div>
+    </div>
+</section>
+
 {% endblock %}

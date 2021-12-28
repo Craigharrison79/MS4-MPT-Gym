@@ -3,190 +3,206 @@
 
 {% block page_header %}
 <div class="container header-container">
-    <div class="row">
-        <div class="col">
+  <div class="row">
+    <div class="col">
 
-        </div>
     </div>
+  </div>
 </div>
 {% endblock %}
 
 {% block content %}
 
 <div class="container-fluid full-screen">
-    <section class="mt-1">
+  <section class="mt-1">
+    <div class="row">
+      <div class="overlay"></div>
+      <!-- service col -->
+      <div class="col">
         <div class="row">
-            <div class="overlay"></div>
-            <!-- service col -->
-            <div class="col">
-                <div class="row">
-                  <!-- middle to large screen will be display (below for small screen)-->
-                    <div class="col-12 col-md-3 text-center py-3 d-none d-sm-none d-md-block">
-                    <div>
-                        <a href="{% url 'clubs' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left text-white"></i>
-                            </span>
-                            <span class="text-uppercase text-white">Back to Clubs</span>
-                        </a>
-                    </div>
-                    </div>
-                    <div class="col-12 col-md-9 text-center pt-4">
-                        
-                        <h2 class="text-white text-uppercase">{{ club.club }}</h2>
-                        
-                    </div>
-                    <hr class="text-white">
-                    <!-- small screen will be display (above for big screen)-->
-                    <div class="d-block d-sm-block d-md-none">
-                      <a href="{% url 'clubs' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left text-white"></i>
-                        </span>
-                        <span class="text-uppercase text-white">Back to Clubs</span>
-                    </a>
-                    </div>
-                </div>
-                <section class="container col-12">
-                    <div class="row mt-1 mb-2">
-                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                            <div class="card mb-3 base-color">
-                              {%  if club.image %}
-                              <img src="{{ club.image.url }}" class="card-img-top" alt="{{ club.name}}">
-                              {% else %}
-                              <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{ club.name}}">
-                              {% endif %}
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-orange text-uppercase">{{ club.club }}</h5>
-                                    <p class="mb-2 ">{{ club.phone_number }}</p>
-                                    <p class="mb-2">{{ club.street_address }}</p>
-                                    <p class="mb-2">{{ club.city_or_town }}</p>
-                                    <p class="mb-2">{{ club.postcode }}</p>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col text-center">
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary opening-times" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            Opening Times
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <!-- personal trainer section-->
-                        <div class="col">
-                            <div class="col text-center p-3">
-                                <h4 class="text-white">Personal Trainers</h>
-                                <hr class="text-white">
-                            </div>
-                            <div class="row row-cols-1 row-cols-lg-2 g-2 personal-trainers mb-5">
-                                {% for pt in pts %}
-                                     {% if club == pt.club %}
-                                <div class="col">
-                                    <div class="card text-center pt-container base-color">
-                                        <div class="rounded-image">
-                                            <picture>
-                                                {%  if pt.image %}
-                                                <img src="{{ pt.image.url }}" class="card-img-top" alt="{{ pt.name}}">
-                                                {% else %}
-                                                <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{ pt.name}}">
-                                                {% endif %}
-                                            </picture>
-                                        </div>
-                                        
-                                            <div class="card-body">
-                                            <h5 class="card-title text-white">{{ pt.full_name }}</h5>
-                                            
-                                            <div class="accordion accordion-flush" id="accordionFlushExample">
-                                                
-                                                <div class="accordion-item base-color">
-                                                  <h2 class="accordion-header" id="flush-headingOne">
-                                                    <button class="accordion-button collapsed base-color text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                                      Speciality
-                                                    </button>
-                                                  </h2>
-                                                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
-                                                        <p class="card-text"><small>{{ pt.speciality1 }}</small></p>
-                                                        <hr class="text-white">
-                                                        <p class="card-text"><small>{{ pt.speciality2 }}</small></p>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                
-                                                <div class="accordion-item base-color">
-                                                  <h2 class="accordion-header" id="flush-headingTwo">
-                                                    <button class="accordion-button collapsed base-color text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                                      Social Media
-                                                    </button>
-                                                  </h2>
-                                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
-                                                      {% if pt.social_link_1 %}
-                                                      <a href="{{ pt.social_link_1 }}" target="_blank" rel="noopener" class="btn btn-outline-black rounded-0 btn-lg text-black">
-                                                      <p><i class="fas fa-laptop-code"></i></p>
-                                                      </a>
-                                                      {% else %}
-                                                      <p></p>
-                                                      {% endif %}
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div class="accordion-item base-color">
-                                                  <h2 class="accordion-header" id="flush-headingThree">
-                                                    <button class="accordion-button collapsed base-color text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                                      Contact Number
-                                                    </button>
-                                                  </h2>
-                                                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
-                                                        <h6 class="text-white">
-                                                            {{ pt.phone_number }}
-                                                        </h6>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                {% endif %}
-                                
-                                {% endfor %}
-                                
-                            </div>
-                        </div>
-                    </div>
-                </section>
+          <!-- middle to large screen will be display (below for small screen)-->
+          <div class="col-12 col-md-3 text-center py-3 d-none d-sm-none d-md-block">
+            <div>
+              <a href="{% url 'clubs' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                  <i class="fas fa-chevron-left text-white"></i>
+                </span>
+                <span class="text-uppercase text-white">Back to Clubs</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-9 text-center pt-4">
 
+            <h2 class="text-white text-uppercase">{{ club.club }}</h2>
+
+          </div>
+          <hr class="text-white">
+          <!-- small screen will be display (above for big screen)-->
+          <div class="d-block d-sm-block d-md-none">
+            <a href="{% url 'clubs' %}" class="btn btn-outline-black rounded-0 btn-lg">
+              <span class="icon">
+                <i class="fas fa-chevron-left text-white"></i>
+              </span>
+              <span class="text-uppercase text-white">Back to Clubs</span>
+            </a>
+          </div>
+        </div>
+        <section class="container col-12">
+          <div class="row mt-1 mb-2">
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+              <div class="card mb-3 base-color">
+                {%  if club.image %}
+                <img src="{{ club.image.url }}" class="card-img-top" alt="{{ club.name}}">
+                {% else %}
+                <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{ club.name}}">
+                {% endif %}
+                <div class="card-body text-center">
+                  <h5 class="card-title text-orange text-uppercase">{{ club.club }}</h5>
+                  <p class="mb-2 ">{{ club.phone_number }}</p>
+                  <p class="mb-2">{{ club.street_address }}</p>
+                  <p class="mb-2">{{ club.city_or_town }}</p>
+                  <p class="mb-2">{{ club.postcode }}</p>
+                </div>
+                <div class="row mb-3">
+                  <div class="col text-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary opening-times" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
+                      Opening Times
+                    </button>
+                  </div>
+                </div>
+              </div>
 
             </div>
-        </div>
-    </section>
+
+            <!-- personal trainer section-->
+            <div class="col">
+              <div class="col text-center p-3">
+                <h4 class="text-white">Personal Trainers</h>
+                  <hr class="text-white">
+              </div>
+              <div class="row row-cols-1 row-cols-lg-2 g-2 personal-trainers mb-5">
+                {% for pt in pts %}
+                {% if club == pt.club %}
+                <div class="col">
+                  <div class="card text-center pt-container base-color">
+                    <div class="rounded-image">
+                      <picture>
+                        {%  if pt.image %}
+                        <img src="{{ pt.image.url }}" class="card-img-top" alt="{{ pt.name}}">
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top" alt="{{ pt.name}}">
+                        {% endif %}
+                      </picture>
+                    </div>
+
+                    <div class="card-body">
+                      <h5 class="card-title text-white">{{ pt.full_name }}</h5>
+
+                      <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                        <div class="accordion-item base-color">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed base-color text-white" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                              aria-controls="flush-collapseOne">
+                              Speciality
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              <p class="card-text"><small>{{ pt.speciality1 }}</small></p>
+                              <hr class="text-white">
+                              <p class="card-text"><small>{{ pt.speciality2 }}</small></p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item base-color">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed base-color text-white" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                              aria-controls="flush-collapseTwo">
+                              Social Media
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              {% if pt.social_link_1 %}
+                              <a href="{{ pt.social_link_1 }}" target="_blank" rel="noopener"
+                                class="btn btn-outline-black rounded-0 btn-lg text-black">
+                                <p><i class="fas fa-laptop-code"></i></p>
+                              </a>
+                              {% else %}
+                              <p></p>
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item base-color">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed base-color text-white" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                              aria-controls="flush-collapseThree">
+                              Contact Number
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                              <h6 class="text-white">
+                                {{ pt.phone_number }}
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div>
+                      <h4>
+                        <a href="{% url 'products' %}" class="text-uppercase py-2 btn btn-light">Buy Personal
+                          Training</a>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+
+                {% endfor %}
+
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </div>
+    </div>
+  </section>
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content base-color">
-        <div class="modal-header">
-          <h5 class="modal-title text-orange" id="exampleModalLabel">Opening Hours</h5>
-          </div>
-        <div class="modal-body text-center">
-            <p>Monday-Thursday: <span>6:00-22:00</span></p>
-            <p>Friday: <span>6:00-20:00</span></p>
-            <p>Saturday: <span>8:00-18:00</span></p>
-            <p>Friday: <span>9:00-19:00</span></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary opening-times" data-bs-dismiss="modal">Close</button>
-        </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content base-color">
+      <div class="modal-header">
+        <h5 class="modal-title text-orange" id="exampleModalLabel">Opening Hours</h5>
+      </div>
+      <div class="modal-body text-center">
+        <p>Monday-Thursday: <span>6:00-22:00</span></p>
+        <p>Friday: <span>6:00-20:00</span></p>
+        <p>Saturday: <span>8:00-18:00</span></p>
+        <p>Friday: <span>9:00-19:00</span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary opening-times" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
-  
+</div>
+
 
 {% endblock %}
-
