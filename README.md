@@ -195,7 +195,11 @@ A pptx version of the feature trade-off can been see [here](documentation/design
 
 [Google Fonts](https://fonts.google.com/)
 
+I choices to use Bungee Outline for the Logo and I keep the font simple with sans-serif.
+
 ### Color Scheme
+
+Theme color is just a simple three colors, dark blue, orange touches and white.  The orange is to give a pop of color when needed.
 
 ![Colour Scheme](documentation/design/design-structure/colours.png)
 
@@ -293,11 +297,15 @@ Image details and information about the image can be found here in [this documen
 
 # Testing User Stories
 
-- ## User Stories Testing can be read [here]().
+- ## User Stories Testing can be read [here](documentation/testing/testing-user-stories.md).
 
 # Testing
 
 - ## Testing process can be read [here](documentation/testing/testing.md).
+
+# Testing
+
+- ## Testing process can be read [here](documentation/testing/performance-testing.md).
 
 # Deployment
 
@@ -417,6 +425,143 @@ Now enter is your all the Config Vars you need into Heroku settings.  Click on t
 ![config-var](documentation/testing/files/deployment/heroku-config.png)
 ![config-var](documentation/testing/files/deployment/config-vars.png)
 
+## AWS S3 Configuration
+
+All static and images are host on Amazon Web Services.
+
+- Open up a account with AWS
+- Once you are login to your account open up S3 to find this use the search bar and type in S3 and S3 management will appear, click on it.
+
+![AWS](documentation/testing/files/deployment/AWS-search-bar.png)
+
+- Now we need to create a new bucket.
+    - click on create bucket and name it the same at your heroku app name.
+    - select the region close to you.
+    - Uncheck block all public access as we need to allow publie access to our static files.
+    - Click on ackowledge the bucket will be public.
+    - Then click create bucket button.
+
+![AWS2](documentation/testing/files/deployment/bucket-name.png)
+![AWS3](documentation/testing/files/deployment/uncheck.png)
+
+Your bucket should be create now:
+
+![AWS4](documentation/testing/files/deployment/bucket-done.png)
+
+Click on this bucket as we need to set a few settings. Go to properties tab and at the click on
+edit static website hosting
+
+![AWS5](documentation/testing/files/deployment/bucket-settings.png)
+![AWS6](documentation/testing/files/deployment/bucket-settings-2.png)
+
+- Enter `index.html` in index document and `error.html` in error document.
+
+In the permissions tab we need to make 3 changes.
+-   Cross-origin resource sharing (CORS configuration):
+    - Paste in
+    ```
+    [
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+    ]
+    ```
+
+- In the bucket Policy tab select policy generator to create a security policy for this bucket.
+
+- Principal:
+    - Actions: GetObject
+    - ARN: Copy the ARN from the Bucket Policy tab and paste here.
+    - Click Add Statement then Generate Policy.
+    - Copy the new policy and paste into the Bucket Policy editor.
+    - To allow access to all resources add a "/*" onto the end of the Resource key value.
+    - Save the new policy.
+
+- Last thing in this section is to go to Access Control List (ACL):
+    -   On the "Everyone (public access)" line check the List checkbox and click Save changes.
+
+Now we need to find the Identity and Access Management (IAM) so in search bar type IAM and click on this to load up the page.
+
+![AWS7](documentation/testing/files/deployment/IAM.png)
+
+We need to create a group so click on User Group. Enter a group name then scroll to the bottom and click Create group. Dont worry about anything else just click through.
+
+Let create a Policy, click on the Policies button then create policy button
+
+![AWS8](documentation/testing/files/deployment/policies.png)
+
+Go to the json tab and select import managed policy. Now search for the `AmazonS3FullAccess` policy and import this. 
+
+- We need the ARN from the S3 bucket.
+    - So click on the S3 bucket and go to the Permissions tab.
+    - Click on edit Bucket Policy and copy the ARN: code.
+
+![AWS9](documentation/testing/files/deployment/S3-bucket.png)
+![AWS10](documentation/testing/files/deployment/edit-policy.png)
+
+Now back in Policies paste in the ARN code in were the "Resource": [] section.
+
+    ```     
+        "Resource": [
+            "arn:aws:s3:::s3-bucket-name",
+            "arn:aws:s3:::s3--bucket-name/*"
+        ]
+    ```
+
+Click Review Policy button, give it a name and description and then click create policy.
+
+Go the the User Group tab and click on the group name file.
+
+![AWS11](documentation/testing/files/deployment/group-name.png)
+
+Click attach policy, search for the name of the policy you created. Select it and click attach policy.
+
+Last we need to create a user to put in the group.  Go to the user tabs and click it. On the user page, click add user and give the user a name.  Give them programmatic access. Click next and then user the user to the group. Just click through to the end.
+
+Download the CSV file this contains the user access key and secret access key which will be used for authentication in Django.
+
+In gitpod terminal we need to connect Django to S3 bucket. Install 2 packages:
+`pip3 install boto3`,
+`pip3 install django-storages`
+
+Freeze the requirements:
+`pip3 freeze > requirements.txt`.
+
+In django settings add `storages` in installed apps.
+![AWS12](documentation/testing/files/deployment/installed-apps.png)
+
+Next add AWS environ to django settings, see image below. And then add config vars to Heroku.
+
+![AWS13](documentation/testing/files/deployment/AWS-env.png)
+![AWS13](documentation/testing/files/deployment/config-vars.png)
+
+Now create a file call custom storages and import both our settings from django.cof and well as the s3boto3 stprage class:
+```
+    from django.conf import settings
+    from storages.backends.s3boto3 import S3Boto3Storage
+
+
+    class StaticStorage(S3Boto3Storage):
+        location = settings.STATICFILES_LOCATION
+
+
+    class MediaStorage(S3Boto3Storage):
+        location = settings.MEDIAFILES_LOCATION
+```
+
+Last thing to do is to 
+- git add .
+- git commit
+- git push
 
 # Credits
 
