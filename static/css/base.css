@@ -154,7 +154,7 @@ input[name='q']::placeholder {
 /* --CI code from boutique ado -- bootstrap toasts --*/
 .message-container {
     position: fixed;
-    top: 164px;
+    top: 100px;
     right: 15px;
     z-index: 99999999999;
 }
