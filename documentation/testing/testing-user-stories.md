@@ -182,7 +182,9 @@
 
 - Every page has the related social media button in the footer which when clicked will take the user to the appropriate page in a new browser.
 
-- ## Did we achieve the result now: Yes
+- ## Did we achieve the result now: No 
+
+- ### Had issue with the footer on different pages and try a few thing but ran out of time to fix it.  I just remove the footer.  No time as project need to be handed in and I have a 8 month boy who been keeping me up every night for 3 weeks plus trying to learn two other programs for the job I start in 1 week.
 
 ## As a administrator want to edit / delete products from the site.
 
