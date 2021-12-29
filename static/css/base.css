@@ -40,10 +40,6 @@ html {
     font-family: 'Bungee Outline', cursive;
 }
 
-p { 
-    color: white !important;
-}
-
 .text-color {
     color: white !important;
 }
@@ -129,6 +125,11 @@ p {
     font-size: 30px;
     color: white;
     font-family: 'Bungee Outline', cursive;
+}
+
+/* To fix the footer height on screen in login and logout */
+.screen-height {
+    height: 100vh !important;
 }
 
 /* Return from shopping bag to url page */
@@ -258,6 +259,7 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
+    margin-bottom: 10px;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -329,12 +331,50 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+#payment-form .form-control {
+    margin-bottom: 10px;
+}
+
+#profile-update-form .form-control  {
+    margin-bottom: 10px;
+}
+
+.footer-position {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer-runoff {
+    margin-bottom: 200px;
+}
+
+.lg-screen-fix {
+    margin-bottom: 150px;
+}
+
 /* Media Queries */
 @media (max-width: 402px) {
     /* push body down to the bottom of main page header */
     .mobile-small-screen {
         font-size: 12px;
     }
+
+    .footer-heading h4 {
+        font-size: 20px;
+    }
+
+    .social a {
+        font-size: 20px;
+    }
+
+    .small-screen-fix {
+        margin-bottom: 150px;
+    }
+
+
+
 }
 
 @media (max-width: 356px) {

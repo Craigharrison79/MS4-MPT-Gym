@@ -4,7 +4,7 @@
             aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-search fa-lg text-white"></i></div>
-                <p class="my-0">Search</p>
+                <p class="my-0 text-white">Search</p>
             </div>
         </a>
         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -28,7 +28,7 @@
             href="#" id="user-options1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-user fa-lg text-white"></i></div>
-                <p class="my-0">My Account</p>
+                <p class="my-0 text-white">My Account</p>
             </div>
         </a>
         <div class="dropdown-menu border-0" aria-labelledby="user-options1">
@@ -49,7 +49,7 @@
             href="{% url 'view_bag' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg text-white"></i></div>
-                <p class="my-0">
+                <p class="my-0 text-white">
                     {% if grand_total %}
                     {{ grand_total|floatformat:2 }}kr
                     {% else %}

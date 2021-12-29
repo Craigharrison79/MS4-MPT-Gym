@@ -34,10 +34,10 @@
 
                             <div class="card-body p-5 text-center">
                                 <h5 class="mb-2 text-uppercase text-white"><strong>{{ club.club }}</strong></h5>
-                                <p class="mb-2 ">{{ club.phone_number }}</p>
-                                <p class="mb-2">{{ club.street_address }}</p>
-                                <p class="mb-2">{{ club.city_or_town }}</p>
-                                <p class="mb-2">{{ club.postcode }}</p>
+                                <p class="mb-2 text-white">{{ club.phone_number }}</p>
+                                <p class="mb-2 text-white">{{ club.street_address }}</p>
+                                <p class="mb-2 text-white">{{ club.city_or_town }}</p>
+                                <p class="mb-2 text-white">{{ club.postcode }}</p>
                                 <a href="{% url 'club_detail' club.id %}"
                                     class="text-uppercase btn btn-sm btn-outline-orange p-2 mt-2">click here</a>
                             </div>
