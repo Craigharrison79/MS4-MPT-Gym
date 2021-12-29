@@ -26,7 +26,7 @@ W#C Markup Validation Service and CSS plus PEP online and JSHint were used.
 
 ### HTML Validation
 
-- Had some issue throughtout the site but I feel this is due to Django, issue with forms and div, section tags.
+- Had some issues throughout the site but I feel this is due to Django, issue with forms and div, section tags.
 
 ![HTML](/documentation/testing/files/performance-test/HTML.png)
 ![HTML](/documentation/testing/files/performance-test/HTML2.png)
@@ -37,6 +37,6 @@ W#C Markup Validation Service and CSS plus PEP online and JSHint were used.
 
 ### JHints
 
-I few issue but this is all code from the Code Institute [CI](https://codeinstitute.net/) so I keep it as it.
+I few issues but this is all code from the Code Institute [CI](https://codeinstitute.net/) so I keep it as it is.
 
 ![JHints](/documentation/testing/files/performance-test/JHints.png)

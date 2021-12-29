@@ -5,17 +5,19 @@ html {
     height: 100%;
 }
 
-.hero-block {
-    background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
+.hero-image {
+        background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
+        background-size: cover;
+        height: 100% !important;
 }
-
 
 .full-screen {
     background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
     background-size: cover;
-    height: 100% !important;
+}
+
+.screen-height {
+    height: 100vh !important;
 }
 
 /* Color background  section for the site */
@@ -53,13 +55,6 @@ html {
     color: white !important;
 }
 
-.personal-trainers .pt-container .rounded-image {
-    height: 140px;
-    width: 140px;
-    margin: 0 auto;
-    margin-top: 10px;
-}
-
 .photo-size{
     height: 500px;
 }
@@ -93,6 +88,10 @@ html {
     border-color: orange;
 }
 
+.club-cards {
+    height: 100vh;
+}
+
 /*-- Club detail page --*/
 
 .text-orange {
@@ -111,25 +110,19 @@ html {
     color: orange;
 }
 
-/* Footer section */
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
+.review-form-body  {
+    margin-bottom: 60px;
 }
 
-.logo-2 {
-    font-size: 30px;
-    color: white;
-    font-family: 'Bungee Outline', cursive;
+.personal-trainers .pt-container .rounded-image {
+    height: 140px;
+    width: 140px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
-/* To fix the footer height on screen in login and logout */
-.screen-height {
-    height: 100vh !important;
+.personal-trainers {
+    margin-bottom: 100px;
 }
 
 /* Return from shopping bag to url page */
@@ -236,12 +229,6 @@ input[name='q']::placeholder {
     color: orange;
 }
 
-/*-- Profile page --*/
-
-.page-height {
-    height: 100vh;
-}
-
 /*-- Allauth form formatting --*/
 
 /* Slightly larger container on xl screens */
@@ -346,35 +333,25 @@ input[name='q']::placeholder {
     width: 100%;
 }
 
-.footer-runoff {
-    margin-bottom: 200px;
-}
-
-.lg-screen-fix {
-    margin-bottom: 150px;
+/* Media Queries */
+@media (max-width: 600px) {
+    
 }
 
 /* Media Queries */
-@media (max-width: 402px) {
+@media (max-width: 412px) {
     /* push body down to the bottom of main page header */
     .mobile-small-screen {
         font-size: 12px;
-    }
-
-    .footer-heading h4 {
-        font-size: 20px;
     }
 
     .social a {
         font-size: 20px;
     }
 
-    .small-screen-fix {
-        margin-bottom: 150px;
+    .full-screen {
+        height: 250vh;
     }
-
-
-
 }
 
 @media (max-width: 356px) {
