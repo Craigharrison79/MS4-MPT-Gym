@@ -99,22 +99,13 @@
 
 - ## All Pages
 
-    - Two spots that a user can sign up, navbar (Accounts) and from the home page.
+    - A user can sign up from the navbar (Accounts) on any pages.
 
     - Once signed up the user can navigate to his/her dashbroad to enter in personal details i.e address.
 
-    - Once sign in the user can also see any purchases history.
+    - Once sign in the user can also see any purchases history in  the profile page.
 
-- ## Did we achieve the result: Yes
-
-![login-menu](/documentation/testing/files/user-stories/login-register.png)
-
-
-## As a returning User, I want to log in to my dash-broad.
-
-- ## All Pages
-
-    - Two spots that a user can sign up, navbar and from the home page.
+    - A user can sign up in the navbar and from any page.
 
     - Simple sign in process with 
         - email address
@@ -122,6 +113,17 @@
         - username
         - password
         - password confirmation
+
+- ## Did we achieve the result: Yes
+
+![login-menu](/documentation/testing/files/user-stories/login-register.png)
+![login-menu2](/documentation/testing/files/user-stories/signup.png)
+
+## As a returning User, I want to log in to my dash-broad.
+
+- ## All Pages
+
+    - A user can sign in the navbar and from any page.
 
     - Navbar indicate if you as a user is signed up already by transforming the account dropdown menu to have 'My Profile' and 'Log out'.
 
@@ -135,6 +137,8 @@
 
 - ## Did we achieve the result: Yes
 
+![login](/documentation/testing/files/user-stories/sign-in.png)
+
 ## As a User, I want to log out and to know if I am logged out.
 
 - ## All Pages
@@ -143,9 +147,13 @@
 
     - Navbar indicate if the user is log out by replacing the log out button with a log in button.
 
+    - The user will be taken to a page to confirm they want to log out.
+
     - Flash message will appear with a message that you have logged out.
 
 - ## Did we achieve the result: Yes
+
+![log-out](/documentation/testing/files/user-stories/log-out.png)
 
 ## As a User / Visitor I want to be able to find a products quickly.
 
@@ -186,6 +194,7 @@
 
 - ### Had issue with the footer on different pages and try a few thing but ran out of time to fix it.  I just remove the footer.  No time as project need to be handed in and I have a 8 month boy who been keeping me up every night for 3 weeks plus trying to learn two other programs for the job I start in 1 week.
 
+
 ## As a administrator want to edit / delete products from the site.
 
 - On the product page a admin user can edit / delete a product by clicking on the edit / delete buttons. This also can be done in the product detail page.
@@ -202,3 +211,111 @@
 ![product-edit2](/documentation/testing/files/user-stories/product-detail.png)
 ![product-edit3](/documentation/testing/files/user-stories/product-edit-item.png)
 
+## As a administrator want to add products to the site.
+
+- If the user is sign in and is gain admin status then they can access this feature in the account menu in the navbar, under Product Management.
+
+- The admin user in how enter in a item using the form.
+    - Category
+    - Sku
+    - Name * required
+    - Description * required
+    - Has sizes
+    - Price * required
+    - Rating
+    - Flavour
+    - Weight
+    - Image url
+    - Image (button to load photo)
+    - Tags
+    - Ingredients
+    - Number of sessions
+    - Price per session
+
+- Once the user confirm adding product by the "Add Product" button.  The will be a flash message with a success message and the user will be taken to the product detail page of that new item.
+
+- ## Did we achieve the result now: Yes
+
+![add-product](/documentation/testing/files/user-stories/add-product.png)
+
+# As a user I want know how many items and total price of the purchase that is in the bag in real time.
+
+- As a user adds item to they bag the baggage icon in the navbar will update with each addition to the bag.
+    - Number of items in the bag.
+    - Total cost in the bag.
+
+- The user will also get a flash message with more detail about the content of the bag with each new addition to the bag. The user in also scroll in this window to see other items.
+    - Items name.
+    - Size of clothing chosen.
+    - quantity of the item.
+    - Total price of bag content
+
+- ## Did we achieve the result now: Yes
+
+![bag](/documentation/testing/files/user-stories/bag-realtime.png)
+
+# As a user I like to see a detail look into the my shopping bag.
+
+- A user can click on to the shopping bag at the top, right of the navbar to look at the shopping bag contant.  Once click the user will be taken to the shopping bag cart. In here the is a detail profile of each item in the cart.
+    - Image of the each item.
+    - Item name
+    - Item sku
+    - Size of Item
+    - Price
+    - Qty
+    - Subtotal
+    - Bag Total
+    - Delivery cost
+    - Grand Total:
+
+- ## Did we achieve the result now: Yes
+
+![bag2](/documentation/testing/files/user-stories/bag-overview.png)
+
+# As a user I want to be able to change what in the shopping bag cart eg Quantity, Remove item.
+
+- On the shopping cart page the is a quantity input to allow the user to increase and decrease the quantity.  Once the user has enter the quantity number they can click update below the input reader to update the item.
+
+- The user can just remove the item from the bag by click the remove icon below the quantity input reader.
+
+- When the user has updated or remove the item / items the Bag Total, Delivery cost and Grand Total will update also.  As well as Sub-total to any items that have the quantity increase or decrease.
+
+- ## Did we achieve the result now: Yes
+
+
+![bag-update](/documentation/testing/files/user-stories/update-bag.png)
+![bag-update2](/documentation/testing/files/user-stories/update-bag-2.png)
+
+# As a user I want a easy to read checkout form that I can also save my detail for further use in the future.
+
+- To help the user enter the right detail into the checkout form the form is very clear looking and reads from top the bottom.  The form has placeholders in each input section and will flash a prompt message if any information is enter incorrect.
+
+- The is also a checkbox for the user to click if they want there delivery detail saving.  This will auto fill next time they purchase another order in the future.
+
+- ## Did we achieve the result now: Yes
+
+![checkout](/documentation/testing/files/user-stories/checkout.png)
+
+# As a user I want confirmation that my order has accept.
+
+- Once the user has click the complete order button, they will be taken to confirmation page with the detail of:
+    - Order Number
+    - Order Date
+    - Items details
+    - Delivery address
+    - Billing info
+        - Order Total
+        - Delivery Cost
+        - Grand Total
+
+- Plus a flash message saying order was confirmation and accepted.
+
+- The user will also be sent a email with the confirmation detail.
+
+- The user can go and see confirmation history in they profile page, on all the different order history.
+
+- ## Did we achieve the result now: Yes
+
+![Thank](/documentation/testing/files/user-stories/thank-you.png)
+![email](/documentation/testing/files/user-stories/confirm-payment.png)
+![profile-history](/documentation/testing/files/user-stories/profile-history.png)
