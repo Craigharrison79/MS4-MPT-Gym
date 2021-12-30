@@ -42,8 +42,8 @@ As a personal trainer, I wanted to build a fictional personal training website t
 
 - To increase an online presence.
 - To drive and connect to members.
-- To convert new customer.
-- To add a new way of build revenue in the company.
+- To convert new customers.
+- To add a new way of building revenue in the company.
 - 
 
 #### User goals
@@ -58,7 +58,7 @@ As a personal trainer, I wanted to build a fictional personal training website t
 - **Website experience**
 
     - Would like an easy site to navigate and also simple for the user to understand what they are looking at or for.
-    - Would like a responsive website that can be access on different devices.
+    - Would like a responsive website that can be accessed on different devices.
 
 -  **Club / Personal Trainer experience**
 
@@ -79,12 +79,12 @@ As a personal trainer, I wanted to build a fictional personal training website t
     - Would like to review my bag items to change or adjust as needed.
     - Would like to see the overall grand total of my shopping bag.
     - Would like a safe and secure way to enter payment information with a form that is easy to follow and understand.
-    - Would like a way to safe my payment detail to make my next purchase quick and easy.
+    - Would like a way to save my payment details to make my next purchase quick and easy.
     - Would like to receive a confirmation on my purchase order.
 
 - **Contact**
 
-    - Would like a way to contact the owner of the site to make queries or inquiries from things like orders to question about personal trainers and clubs.
+    - Would like a way to contact the owner of the site to make queries or inquiries from things like orders to questions about personal trainers and clubs.
 
 - **Registratinon and Profile**
 
@@ -141,7 +141,7 @@ As a personal trainer, I wanted to build a fictional personal training website t
 
 ## Building Constraints
 
-- The owner is building the site for the first time and is still learning Python, Django. The lack of knowledge could hinder me from fulfilling the owner's overall look and features on this platform.
+- The owner is building the site for the first time and is still learning Python, Django. The lack of knowledge could hinder me from fulfilling the overall look and features on this platform.
 - Lack of time: to implement features due to learning new technical skills. Full-time work and two kids (one being 8 months).
  
 ## Structure
@@ -240,7 +240,7 @@ Image details and information about the images can be found here in [this docume
     - This will display more information about the item and allow the user to add the item to the shopping bag for purchase.
     - The user can adjust the quantity of a product they are purchasing.
     - The user can also leave a review or read any review left on the product they are buying.
-    - A superuser/admin user can edit or delete a product straight from this page will the buttons.
+    - A superuser/admin user can edit or delete a product straight from this page with the buttons.
 
 - #### Shopping Cart / Bag
     - The cart will show all items to the user that have been added to the cart. E.g image, name, size, price subtotal, and grand total.
@@ -250,7 +250,7 @@ Image details and information about the images can be found here in [this docume
 - #### Checkout page
     - If the user is login and has to save delivery information from before the form will auto-complete. If not the user can enter the detail and then click the checkbox to save the information for next time.
     - The is a brief summary of the order and cost.
-    - Payment is done by Stripe so everything is safe and secure.  This allows the user to enter in card detail with prompts and notifications if the user enters anything wrong.
+    - Payment is done by Stripe so everything is safe and secure. This allows the user to enter in card detail with prompts and notifications if the user enters anything wrong.
     - A complete order button at the bottom of the page.
 
 - #### CRAD Features
@@ -609,9 +609,9 @@ Last thing to do is to
 
 # Credits
 
-[CodeInstitue]() : contact us form
+[Django-doc](https://docs.djangoproject.com/en/4.0/topics/email/) : contact us form
 
-[CodeInstitue]() : template of the site, and code!
+[CodeInstitue](https://codeinstitute.net/se/) : template of the site, and code!
 
 ## Inspiration for Website
 https://www.zestwellnessnutrition.com/purchase-new/60-min-virtual-11-coaching-session
@@ -629,3 +629,4 @@ https://www.zestwellnessnutrition.com/purchase-new/60-min-virtual-11-coaching-se
 ## Code
 
 - Code Institute [Boutique-ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/933797d5e14d6c3f072df31adf0ca6f938d02218)
+- Django Doc [Django-Doc](https://docs.djangoproject.com/en/4.0/topics/email/)

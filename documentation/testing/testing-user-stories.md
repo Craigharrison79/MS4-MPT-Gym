@@ -6,9 +6,9 @@
 
     - The content has to be optimised for the device I am using when I visit the site.
 
-    - Due to lack of real estate in the navbar on tablet and mobile devices, the navbar menu needs to collapse. A toggle button on the left hand side will appear and when click, a menu will display the menu option. The search, account and bag icon will still be display for accessibility.
+    - Due to lack of real estate in the navbar on tablet and mobile devices, the navbar menu needs to collapse. A toggle button on the left hand side will appear and when clicked, a menu will display the menu option. The search, account and bag icon will still be displayed for accessibility.
 
-    - If toggle the button is click once, the menu will appear and clicked again it will close and disappear.
+    - If toggle the button is clicked once, the menu will appear and clicked again it will close and disappear.
 
 - ## Did we achieve the result: Yes
 
@@ -192,8 +192,7 @@
 
 - ## Did we achieve the result now: No 
 
-- ### Had an issue with the footer on different pages and try a few things but ran out of time to fix it.  I just remove the footer.  No time as the project needs to be handed in and I have an 8-month boy who has been keeping me up every night for 3 weeks plus trying to learn two other programs for the job I start in 1 week 3rd Jan.
-
+- ### Had an issue with the footer on different pages and try a few things but ran out of time to fix it.  I just remove the footer.  No time as the project needs to be handed in, plus I am trying to learn a other programs languages for a new job I start in 1 week (3rd Jan).
 
 ## As a admiAs an administrator, he/she would want to edit or delete products from the site.nistrator want to edit / delete products from the site.
 
@@ -310,7 +309,7 @@
 
 - Plus a flash message saying the order was confirmed and accepted.
 
-- The user will also be sent an email with the confirmation detail.
+- The user will also be sent an email with the confirmation details.
 
 - The user can go and see confirmation history on their profile page, on all their different order history.
 
