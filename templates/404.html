@@ -4,11 +4,18 @@
 
 {% block content %}
 <section>
-    <div class="error">
-        <p class="text-black">Sorry, Please return back to the webstie!</p>
-        <div class="pb-3 pt-3"><a href="{% url 'home' %}" class="btn btn-outline-black btn-dark text-uppercase">
-                <i class="text-uppercase text-black"></i>Back to site </a>
+    <div class="row error">
+        <div class="col text-center">
+            <div class="col-12">
+                <a class="navbar-brand nav-link logo" href="{% url 'home' %}"><h4><strong>MPT GYM</strong></h4></a>
+              </div>
+            <p class="text-black"><strong>Sorry, Please return back to the webstie!</strong></p>
+            <p class="text-black">this page you're looking for does not exist!</p>
+            <div class="pb-3 pt-3 base-color"><a href="{% url 'home' %}" class="btn btn-outline-black btn-dark text-uppercase">
+                    <i class="text-uppercase text-black"></i>Back to site </a>
+            </div>
         </div>
+    
     </div>
 </section>
 {% endblock %}
