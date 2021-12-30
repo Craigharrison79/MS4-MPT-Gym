@@ -16,8 +16,8 @@ class Club(models.Model):
                                      on_delete=models.SET_NULL)
     phone_number = models.CharField(
         max_length=14, null=False, blank=False)
-    email = models.EmailField
-    (max_length=255, null=False, blank=False)
+    email = models.EmailField(
+        max_length=255, null=False, blank=False)
     postcode = models.CharField(
         max_length=20,  null=False, blank=False)
     street_address = models.CharField(
