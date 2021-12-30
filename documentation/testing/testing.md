@@ -95,3 +95,11 @@ I had to close the workspace I was using and open up a new one.
 In Github open up the repository and hit Green Gitpod button and build a workspace.
 
 In the new workout I had to pip3 install -r requirements.txt and then I could deploy to heroku.
+
+## Issue with hero image on landing page
+
+As I was fixing the respond issue on mobile devices I run into a problem.  It gitpod terminal window the website was working fine, but in Heroku the image was not showing up.  This was because I was not using the src="{{ MEDIA_URL }}home-gym-photo.jpg" as I was trying to use src="/media/home-gym-photo.jpg".
+
+This fix the issue with the image appearing now on Heroku.  
+
+I was still getting a sizing problem and try lots of CSS to fix this.  Nothing was working so I use a style="height" and style="width" in the HTML.  I need to get back to this at some point in the  future.

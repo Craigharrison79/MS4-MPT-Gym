@@ -4,8 +4,8 @@
 html {
     height: 100%;
 }
-.background-cover {
-    background: url('{{ MEDIA_URL }}media/home-gym-photo.webp') no-repeat center center fixed;
+.full-screen {
+    background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
     height: 100%;
 	width: 100%;
 	top: 0;
@@ -342,8 +342,54 @@ input[name='q']::placeholder {
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
-    
+@media (max-width: 991px) {
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .text-orange {
+        font-size: 1rem;
+    }
+
+    tr, th {
+        font-size: .75rem;
+    }
+
+    td, p {
+        font-size: 0.75rem;
+    }
+
+    .card-body {
+        margin-top: 2rem !important;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
 }
 
 /* Media Queries */
@@ -363,9 +409,9 @@ input[name='q']::placeholder {
 }
 
 @media (max-width: 356px) {
-    /* push body down to the bottom of main page header */
-    .small-screen-wrap {
-        flex-wrap: unset;
+    .navbar-toggler {
+        padding: .4rem .4rem;
+        font-size: 0.75rem;
     }
 }
 
