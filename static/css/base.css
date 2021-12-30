@@ -5,7 +5,7 @@ html {
     height: 100%;
 }
 .background-cover {
-    background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
+    background: url('{{ MEDIA_URL }}media/home-gym-photo.webp') no-repeat center center fixed;
     height: 100%;
 	width: 100%;
 	top: 0;
@@ -20,11 +20,11 @@ html {
         background-size: cover;
         height: 100% !important;
 }
-
+/*
 .full-screen {
     background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
     background-size: cover;
-}
+}*/
 
 .front-page-img-1, img {
     height: 100% !important;
@@ -339,13 +339,6 @@ input[name='q']::placeholder {
 
 #profile-update-form .form-control  {
     margin-bottom: 10px;
-}
-
-.footer-position {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 /* Media Queries */
