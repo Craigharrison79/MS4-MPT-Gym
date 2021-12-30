@@ -4,6 +4,16 @@
 html {
     height: 100%;
 }
+.background-cover {
+    background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
+    height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	
+	z-index: -1;
+}
 
 .hero-image {
         background: url('/media/home-gym-photo.webp') no-repeat center center fixed;
@@ -16,7 +26,7 @@ html {
     background-size: cover;
 }
 
-.front-page-img-1 img {
+.front-page-img-1, img {
     height: 100% !important;
     width: 100% !important;
 }
