@@ -16,6 +16,11 @@ html {
     background-size: cover;
 }
 
+.front-page-img-1 img {
+    height: 100% !important;
+    width: 100% !important;
+}
+
 .screen-height {
     height: 100vh !important;
 }
@@ -54,10 +59,10 @@ html {
 .narbar-light .navbar-nav .nav-link {
     color: white !important;
 }
-
+/*
 .photo-size{
     height: 500px;
-}
+}*/
 
 /* CI code from boutique ado */
 .overlay {
