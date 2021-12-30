@@ -35,17 +35,11 @@
                     </small>
                     {% endif %}
                 </div>
-
             </div>
         </div>
     </div>
     <section class="row">
-
-
-
-
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-
             <div class="image-container my-5">
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
@@ -56,7 +50,6 @@
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
-
                 <div class="accordion mt-3" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -91,7 +84,6 @@
                 </div>
             </div>
         </div>
-
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
                 <small>
@@ -110,7 +102,6 @@
                 {% else %}
                 <small class="text-muted text-black">No Rating</small>
                 {% endif %}
-
                 <hr>
                 <p class="lead mb-0 text-left font-weight-bold text-black">{{ product.price }} kr</p>
                 <hr>
@@ -144,7 +135,6 @@
                             <hr>
                         </div>
                     </div>
-
                     <div class="col-12">
                         <p><strong>Quantity:</strong></p>
                         <div class="form-group w-50">
@@ -170,7 +160,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col{% if s %}-12 mt-2{% endif %}">
                         <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                             <span class="icon">
@@ -182,71 +171,65 @@
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     {% endwith %}
-            </div>
-            </form>
-        </div>
-</div>
-</section>
-<!-- Product Review section -->
-<section class="reveiw">
-    <div class="row review-page-heading container-fluid">
-        <div class="col-12">
-            <h4 class="text-uppercase text-black">Reviews</h4>
-            <hr>
-        </div>
-    </div>
-    <div class="row review-page-body container">
-
-        <div class="col-md-6 col-12 added-review-container">
-            {% for review in product.reviews.all %}
-            <div class="review-info mt-3">
-                <span class="text-black review-user-i">BY {{ review.user}}</span>
-                <span class="text-black review-user-date">ON THE: {{ review.created_on|date:"d-m-Y"}} <span>
-                        <br>
-                        <p class="text-black">Rating on this product: <span
-                                class="text-black review-user-rating">{{ review.review_rating }} stars</span></p>
-            </div>
-            <div class="review-comment mt-1">
-                <p class="text-black">{{ review.comment }}</p>
-            </div>
-            <div class="review-delete-comment">
-                {% if request.user.is_superuser %}
-                <a class=" text-danger text-decoration-none" href="{% url 'delete_review' review.id %}"><i
-                        class="fas fa-trash-alt"></i> Click to delete
-                    Review</a>
-                {% endif %}
-            </div>
-            <hr>
-            {% endfor%}
-        </div>
-        <div class="col-md-6 col-12 text-center">
-            <div class="review-form-heading">
-                <h5 class="text-uppercase text-black">Write Your Review!</h5>
-            </div>
-            <div class="review-form-body">
-                {% if request.user.is_authenticated %}
-                <form method="POST" action="{% url 'add_review' product.id %}">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <div class="text-center mt-3">
-                        <button class="btn bb1 rounded-0 text-uppercase" type="submit">Submit Review</button>
-                    </div>
                 </form>
-                {% else %}
-                <p class="text-black review-text text-center mt-4">
-                    To Leave a Review!
-                    <a class="user-login" href="{% url 'account_signup' %}">Register</a> or <a class="user-login"
-                        href="{% url 'account_login' %}">Log In</a>
-                </p>
-                {% endif %}
             </div>
-
-
         </div>
-    </div>
-
-
-</section>
+    </section>
+    <!-- Product Review section -->
+    <section class="reveiw">
+        <div class="row review-page-heading container-fluid">
+            <div class="col-12">
+                <h4 class="text-uppercase text-black">Reviews</h4>
+                <hr>
+            </div>
+        </div>
+        <div class="row review-page-body container">
+            <div class="col-md-6 col-12 added-review-container">
+                {% for review in product.reviews.all %}
+                <div class="review-info mt-3">
+                    <span class="text-black review-user-i">BY {{ review.user}}</span>
+                    <span class="text-black review-user-date">ON THE: {{ review.created_on|date:"d-m-Y"}} <span>
+                            <br>
+                            <p class="text-black">Rating on this product: <span
+                                    class="text-black review-user-rating">{{ review.review_rating }} stars</span></p>
+                </div>
+                <div class="review-comment mt-1">
+                    <p class="text-black">{{ review.comment }}</p>
+                </div>
+                <div class="review-delete-comment">
+                    {% if request.user.is_superuser %}
+                    <a class=" text-danger text-decoration-none" href="{% url 'delete_review' review.id %}"><i
+                            class="fas fa-trash-alt"></i> Click to delete
+                        Review</a>
+                    {% endif %}
+                </div>
+                <hr>
+                {% endfor%}
+            </div>
+            <div class="col-md-6 col-12 text-center">
+                <div class="review-form-heading">
+                    <h5 class="text-uppercase text-black">Write Your Review!</h5>
+                </div>
+                <div class="review-form-body">
+                    {% if request.user.is_authenticated %}
+                    <form method="POST" action="{% url 'add_review' product.id %}">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="text-center mt-3">
+                            <button class="btn bb1 rounded-0 text-uppercase" type="submit">Submit Review</button>
+                        </div>
+                    </form>
+                    {% else %}
+                    <p class="text-black review-text text-center mt-4">
+                        To Leave a Review!
+                        <a class="user-login" href="{% url 'account_signup' %}">Register</a> or <a class="user-login"
+                            href="{% url 'account_login' %}">Log In</a>
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}
 
